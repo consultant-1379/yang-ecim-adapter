@@ -1,0 +1,16 @@
+    <get>
+        <filter type="subtree">
+            <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+                <enb-id/>
+                <load-balancing-function>
+                    <lb-threshold/>
+                    <lb-ceiling/>
+                    <lb-rate-offset-coefficient/>
+                    <lb-rate-offset-load-threshold/>
+                    <lb-ca-threshold/>
+                    <lb-diff-ca-offset/>
+                    <lb-ca-cap-hysteresis/>
+                </load-balancing-function>
+            </enodeb-function>
+        </filter>
+    </get>

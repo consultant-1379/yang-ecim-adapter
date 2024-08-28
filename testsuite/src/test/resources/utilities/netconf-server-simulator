@@ -1,0 +1,62 @@
+
+# Requires netconf from https://pypi.python.org/pypi/netconf
+# Last version used is 1.8.3
+# Documentation: http://netconf.readthedocs.io/en/master/
+
+import os
+import sys
+from netconf import nsmap_update, server
+import netconf.util as ncutil
+from time import sleep
+
+MODEL_NS = "urn:my-urn:my-model"
+nsmap_update({'pfx': MODEL_NS})
+
+# Disable output buffering to receive the output instantly
+sys.stdout = os.fdopen(sys.stdout.fileno(), "w", 0)
+sys.stderr = os.fdopen(sys.stderr.fileno(), "w", 0)
+
+this_dir = os.path.dirname(os.path.realpath(__file__))
+this_host_key = this_dir + "/host_key"
+
+class MyServer (object):
+    def __init__ (self, user, pw):
+        controller = server.SSHUserPassController(username=user, password=pw)
+        self.server = server.NetconfSSHServer(server_ctl=controller,
+                                              server_methods=self,
+                                              port=3333,
+                                              host_key=this_host_key,
+                                              debug=True)
+
+    def nc_append_capabilities(self, caps):
+        print "Capabilities requested"
+        print "Deliberately sleeping for 10 secs..."
+        sleep(10)
+        ncutil.subelm(caps, "capability").text = MODEL_NS
+        ncutil.subelm(caps, "capability").text = "urn:com:ericsson:ebase:0.1.0"
+        ncutil.subelm(caps, "capability").text = "urn:com:ericsson:ebase:1.1.0"
+        ncutil.subelm(caps, "capability").text = "urn:com:ericsson:ebase:1.2.0"
+        ncutil.subelm(caps, "capability").text = "urn:ericsson:com:netconf:action:1.0"
+        ncutil.subelm(caps, "capability").text = "urn:ericsson:com:netconf:heartbeat:1.0"
+        ncutil.subelm(caps, "capability").text = "urn:com:ericsson:netconf:operation:1.0"
+
+    def rpc_get(self, session, rpc, *params):
+        print "'get' request"
+        data = ncutil.elm("data")
+        team = ncutil.elm("team")
+        members = ncutil.elm("members")
+        members.append(ncutil.leaf_elm("member", "Richard Feynman"))
+        members.append(ncutil.leaf_elm("member", "Stephen Hawking"))
+        team.append(members)
+        data.append(team)
+        print "Deliberately sleeping for 10 secs during get..."
+        sleep(10)
+        return data
+
+server = MyServer("netsim", "netsim")
+
+while True:
+    exit_signal = raw_input('Hit Ctrl+C anytime or type "q" to stop server\n')
+    if exit_signal == 'q':
+        break
+

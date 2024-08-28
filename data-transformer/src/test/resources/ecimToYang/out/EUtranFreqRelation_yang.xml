@@ -1,0 +1,28 @@
+<enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+  <eutran-cell-fdd>
+    <id>myCell1</id>
+    <eutran-freq-relation>
+      <id>myFreqRelation1</id>
+      <ca-freq-priority>4</ca-freq-priority>
+      <ca-freq-proportion>100</ca-freq-proportion>
+      <ca-triggered-redirection-active>true</ca-triggered-redirection-active>
+      <lb-a5-thr1-rsrp-freq-offset>0</lb-a5-thr1-rsrp-freq-offset>
+      <lb-activation-threshold>0</lb-activation-threshold>
+      <q-offset-freq>0</q-offset-freq>
+      <eutran-freq-to-qci-profile-relation>
+        <qci-profile-ref xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:qci-table/lrtadpt:qci-profile-predefined[lrtadpt:id='qci9']</qci-profile-ref>
+        <lb-qci-profile-handling>allowed</lb-qci-profile-handling>
+      </eutran-freq-to-qci-profile-relation>
+    </eutran-freq-relation>
+    <eutran-freq-relation>
+      <id>myFreqRelation2</id>
+      <eutran-freq-to-qci-profile-relation>
+        <qci-profile-ref xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:qci-table/lrtadpt:qci-profile-operator-defined[lrtadpt:id='qci9']</qci-profile-ref>
+        <lb-qci-profile-handling>allowed</lb-qci-profile-handling>
+      </eutran-freq-to-qci-profile-relation>
+    </eutran-freq-relation>
+    <eutran-freq-relation>
+      <id>myFreqRelation3</id>
+    </eutran-freq-relation>
+  </eutran-cell-fdd>
+</enodeb-function>

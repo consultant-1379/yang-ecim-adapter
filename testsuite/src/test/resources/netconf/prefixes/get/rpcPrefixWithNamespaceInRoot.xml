@@ -1,0 +1,10 @@
+<a:rpc xmlns:a="urn:ietf:params:xml:ns:netconf:base:1.0" a:message-id="0"
+       xmlns:b="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+    <a:get>
+        <a:filter a:type="subtree">
+            <b:enodeb-function>
+                <b:enb-id></b:enb-id>
+            </b:enodeb-function>
+        </a:filter>
+    </a:get>
+</a:rpc>

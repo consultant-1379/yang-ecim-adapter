@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
+    <get>
+        <filter type="subtree">
+            <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+                <schemas/>
+                <capabilities/>
+            </netconf-state>
+            <netconf xmlns="urn:ietf:params:xml:ns:netmod:notification">
+                <streams/>
+            </netconf>
+            <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+                <enb-id>1</enb-id>
+                <enodeb-plmn-id/>
+            </enodeb-function>
+        </filter>
+    </get>
+</rpc>

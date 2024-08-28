@@ -1,0 +1,48 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+    <eventTime>2018-08-15T09:27:16+00:00</eventTime>
+    <events dnPrefix="" xmlns="urn:ericsson:com:netconf:notification:1.0">
+        <objectCreated dn="ManagedElement=1,Equipment=1,AntennaUnitGroup=3,AntennaNearUnit=1,RetSubUnit=2">
+            <attr name="availabilityStatus">
+                <v>OFF_LINE</v>
+            </attr>
+            <attr name="calibrationStatus">
+                <v>UNKNOWN</v>
+            </attr>
+            <attr name="electricalAntennaTilt">
+                <v>0</v>
+            </attr>
+            <attr name="iuantAntennaBearing">
+                <v>-1000</v>
+            </attr>
+            <attr name="iuantAntennaModelNumber"/>
+            <attr name="iuantAntennaOperatingBand">
+                <v>-1000</v>
+            </attr>
+            <attr name="iuantAntennaSerialNumber"/>
+            <attr name="iuantBaseStationId"/>
+            <attr name="iuantInstallationDate"/>
+            <attr name="iuantInstallersId"/>
+            <attr name="iuantSectorId"/>
+            <attr name="maxTilt">
+                <v>-1000</v>
+            </attr>
+            <attr name="minTilt">
+                <v>-1000</v>
+            </attr>
+            <attr name="operationalState">
+                <v>DISABLED</v>
+            </attr>
+            <attr name="reservedBy"/>
+            <attr name="subunitNumber">
+                <v>0</v>
+            </attr>
+            <attr name="userLabel"/>
+            <attr name="iuantAntennaOperatingGain">
+                <v>-1000</v>
+                <v>-1000</v>
+                <v>-1000</v>
+                <v>-1000</v>
+            </attr>
+        </objectCreated>
+    </events>
+</notification>

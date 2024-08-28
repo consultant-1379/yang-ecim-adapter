@@ -1,0 +1,8 @@
+<enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+  <enb-id>1</enb-id>
+  <enodeb-plmn-id>
+    <mcc>111</mcc>
+    <mnc>02</mnc>
+    <mnc-length>2</mnc-length>
+  </enodeb-plmn-id>
+</enodeb-function>

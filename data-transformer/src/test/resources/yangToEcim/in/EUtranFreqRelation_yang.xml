@@ -1,0 +1,28 @@
+<enodeb-function>
+  <eutran-cell-fdd>
+    <id>myCell1</id>
+    <eutran-freq-relation>
+      <id>myFreqRelation1</id>
+      <ca-freq-priority>4</ca-freq-priority>
+      <ca-freq-proportion>100</ca-freq-proportion>
+      <ca-triggered-redirection-active>true</ca-triggered-redirection-active>
+      <lb-a5-thr1-rsrp-freq-offset>0</lb-a5-thr1-rsrp-freq-offset>
+      <lb-activation-threshold>0</lb-activation-threshold>
+      <q-offset-freq>0</q-offset-freq>
+      <eutran-freq-to-qci-profile-relation>
+        <qci-profile-ref operation="merge">/enodeb-function/qci-table/qci-profile-predefined[id=qci9]</qci-profile-ref>
+        <lb-qci-profile-handling>allowed</lb-qci-profile-handling>
+      </eutran-freq-to-qci-profile-relation>
+    </eutran-freq-relation>
+    <eutran-freq-relation>
+      <id>myFreqRelation2</id>
+      <eutran-freq-to-qci-profile-relation operation="create">
+        <qci-profile-ref>/enodeb-function/qci-table/qci-profile-operator-defined[id=qci9]</qci-profile-ref>
+        <lb-qci-profile-handling>allowed</lb-qci-profile-handling>
+      </eutran-freq-to-qci-profile-relation>
+    </eutran-freq-relation>
+    <eutran-freq-relation operation="delete">
+      <id>myFreqRelation3</id>
+    </eutran-freq-relation>
+  </eutran-cell-fdd>
+</enodeb-function>

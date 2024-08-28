@@ -1,0 +1,27 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>LTE01dg2ERBS00001</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtraNetwork>
+            <eUtraNetworkId>1</eUtraNetworkId>
+            <ExternalENodeBFunction>
+                <externalENodeBFunctionId>1</externalENodeBFunctionId>
+                <ExternalEUtranCellFDD>
+                    <externalEUtranCellFDDId>myCell1</externalEUtranCellFDDId>
+                    <localCellId>1</localCellId>
+                </ExternalEUtranCellFDD>
+                <ExternalEUtranCellFDD unexpectedAttr="value1">
+                    <localCellId>2</localCellId>
+                    <externalEUtranCellFDDId>myCell2</externalEUtranCellFDDId>
+                </ExternalEUtranCellFDD>
+                <ExternalEUtranCellFDD unexpectedAttr="value2">
+                    <localCellId>3</localCellId>
+                    <externalEUtranCellFDDId>myCell3</externalEUtranCellFDDId>
+                </ExternalEUtranCellFDD>
+                <ExternalEUtranCellFDD unexpectedAttr="value3">
+                    <externalEUtranCellFDDId>myCell10</externalEUtranCellFDDId>
+                </ExternalEUtranCellFDD>
+            </ExternalENodeBFunction>
+        </EUtraNetwork>
+    </ENodeBFunction>
+</ManagedElement>

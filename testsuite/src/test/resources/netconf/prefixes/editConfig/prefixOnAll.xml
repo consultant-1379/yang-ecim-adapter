@@ -1,0 +1,17 @@
+<t:rpc xmlns:t="urn:ietf:params:xml:ns:netconf:base:1.0" t:message-id="0">
+    <t:edit-config>
+        <t:target>
+            <t:running/>
+        </t:target>
+        <t:config>
+            <nc:enodeb-function xmlns:nc="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+                <nc:qci-table>
+                    <nc:qci-profile-predefined>
+                        <nc:id>9</nc:id>
+                        <nc:qci-subscription-quanta>%s</nc:qci-subscription-quanta>
+                    </nc:qci-profile-predefined>
+                </nc:qci-table>
+            </nc:enodeb-function>
+        </t:config>
+    </t:edit-config>
+</t:rpc>

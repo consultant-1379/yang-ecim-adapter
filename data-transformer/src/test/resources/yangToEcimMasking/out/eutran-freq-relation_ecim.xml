@@ -1,0 +1,25 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <EUtranCellFDD>
+            <EUtranFreqRelation>
+                <caFreqPriority/>
+                <caFreqProportion/>
+                <caTriggeredRedirectionActive/>
+                <lbA5Thr1RsrpFreqOffset/>
+                <lbActivationThreshold/>
+                <eutranFreqToQciProfileRelation/>
+                <qOffsetFreq/>
+                <EUtranCellRelation>
+                    <cellIndividualOffsetEUtran/>
+                    <qOffsetCellEUtran/>
+                    <coverageIndicator/>
+                    <loadBalancing/>
+                    <sCellCandidate/>
+                    <sCellPriority/>
+                    <neighborCellRef/>
+                </EUtranCellRelation>
+            </EUtranFreqRelation>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

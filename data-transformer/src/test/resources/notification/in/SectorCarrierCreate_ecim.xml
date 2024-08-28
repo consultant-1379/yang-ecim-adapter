@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-07-19T17:10:59+00:00</eventTime>
+  <events dnPrefix="" xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <objectCreated dn="ManagedElement=1,ENodeBFunction=1,SectorCarrier=5"/>
+  </events>
+</notification>

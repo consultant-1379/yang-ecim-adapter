@@ -1,0 +1,31 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="0">
+  <edit-config>
+    <target>
+      <running />
+    </target>
+    <config>
+      <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+        <eutran-cell-fdd operation="delete">
+          <id>15</id>
+        </eutran-cell-fdd>
+        <load-balancing-function operation="merge">
+          <lb-threshold>%s</lb-threshold>
+        </load-balancing-function>
+        <load-balancing-function operation="replace">
+          <lb-ceiling>%s</lb-ceiling>
+        </load-balancing-function>
+        <qci-table>
+          <qci-profile-predefined operation="replace">
+            <id>5</id>
+            <qci>0</qci>
+            <priority>0</priority>
+            <dscp>0</dscp>
+            <logical-channel-group-ref/>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>1</qci-subscription-quanta>
+          </qci-profile-predefined>
+        </qci-table>
+      </enodeb-function>
+    </config>
+  </edit-config>
+</rpc>

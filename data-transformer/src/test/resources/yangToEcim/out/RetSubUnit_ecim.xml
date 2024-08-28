@@ -1,0 +1,35 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <Equipment xmlns="urn:com:ericsson:ecim:ReqEquipment">
+        <equipmentId>1</equipmentId>
+        <AntennaUnitGroup xmlns="urn:com:ericsson:ecim:ReqAntennaSystem">
+            <antennaUnitGroupId>1</antennaUnitGroupId>
+            <AntennaNearUnit>
+                <antennaNearUnitId>3</antennaNearUnitId>
+                <RetSubUnit>
+                    <retSubUnitId>retSubUnit1</retSubUnitId>
+                    <availabilityStatus>IN_TEST</availabilityStatus>
+                    <calibrationStatus>FINISHED</calibrationStatus>
+                    <electricalAntennaTilt>-900</electricalAntennaTilt>
+                    <iuantAntennaBearing>-1000</iuantAntennaBearing>
+                    <iuantAntennaModelNumber>iuantAMN_15642</iuantAntennaModelNumber>
+                    <iuantAntennaOperatingBand>-1000</iuantAntennaOperatingBand>
+                    <iuantAntennaSerialNumber>iuantASN_1234567</iuantAntennaSerialNumber>
+                    <iuantBaseStationId>iuantBSId_32</iuantBaseStationId>
+                    <iuantInstallationDate>110613</iuantInstallationDate>
+                    <iuantInstallersId>50029</iuantInstallersId>
+                    <iuantSectorId>32</iuantSectorId>
+                    <maxTilt>-900</maxTilt>
+                    <minTilt>-1000</minTilt>
+                    <operationalState>ENABLED</operationalState>
+                    <subunitNumber>123456654321</subunitNumber>
+                    <iuantAntennaOperatingGain>-1000</iuantAntennaOperatingGain>
+                    <iuantAntennaOperatingGain>0</iuantAntennaOperatingGain>
+                    <iuantAntennaOperatingGain>255</iuantAntennaOperatingGain>
+                    <iuantAntennaOperatingGain>255</iuantAntennaOperatingGain>
+                    <iuantAntennaOperatingGain/>
+                </RetSubUnit>
+            </AntennaNearUnit>
+        </AntennaUnitGroup>
+    </Equipment>
+</ManagedElement>

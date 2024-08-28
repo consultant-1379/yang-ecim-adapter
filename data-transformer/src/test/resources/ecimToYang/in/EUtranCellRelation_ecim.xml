@@ -1,0 +1,32 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>LTE01dg2ERBS00001</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell1</eUtranCellFDDId>
+            <EUtranFreqRelation>
+                <eUtranFreqRelationId>myFreqRelation1</eUtranFreqRelationId>
+                <EUtranCellRelation>
+                    <eUtranCellRelationId>myCellRelation1-1</eUtranCellRelationId>
+                    <coverageIndicator>OVERLAP</coverageIndicator>
+                    <neighborCellRef>ManagedElement=LTE01dg2ERBS00001,ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=extEnb1,ExternalEUtranCellFDD=extCell1</neighborCellRef>
+                    <loadBalancing>NOT_ALLOWED</loadBalancing>
+                    <sCellCandidate>AUTO</sCellCandidate>
+                    <sCellPriority>7</sCellPriority>
+                    <cellIndividualOffsetEUtran>0</cellIndividualOffsetEUtran>
+                    <qOffsetCellEUtran>0</qOffsetCellEUtran>
+                </EUtranCellRelation>
+                <EUtranCellRelation>
+                    <coverageIndicator>NONE</coverageIndicator>
+                    <neighborCellRef>ManagedElement=LTE01dg2ERBS00001,ENodeBFunction=1,EUtranCellFDD=eutranCell1</neighborCellRef>
+                    <eUtranCellRelationId>myCellRelation1-2</eUtranCellRelationId>
+                    <loadBalancing>ALLOWED</loadBalancing>
+                    <sCellCandidate>AUTO</sCellCandidate>
+                    <sCellPriority>8</sCellPriority>
+                    <cellIndividualOffsetEUtran>-24</cellIndividualOffsetEUtran>
+                    <qOffsetCellEUtran>10</qOffsetCellEUtran>
+                </EUtranCellRelation>
+            </EUtranFreqRelation>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

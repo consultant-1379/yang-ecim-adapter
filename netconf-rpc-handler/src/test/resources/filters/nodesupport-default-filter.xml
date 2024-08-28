@@ -1,0 +1,6 @@
+<node-support>
+    <sector-equipment-function>
+        <id>TestNodeSupportDefaultFilter</id>
+        <availability-status config="false"/>
+    </sector-equipment-function>
+</node-support>

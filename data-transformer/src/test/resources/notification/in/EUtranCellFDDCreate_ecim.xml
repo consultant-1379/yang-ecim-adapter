@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <objectCreated dn="ManagedElement=1,ENodeBFunction=1,EUtranCellFDD=myCell1">
+      <attr name="ulChannelBandwidth">
+        <v>20000</v>
+      </attr>
+      <attr name="cellSubscriptionCapacity">
+        <v>100000</v>
+      </attr>
+      <attr name="cellDownlinkCaCapacity">
+        <v>200000</v>
+      </attr>
+      <attr name="dlChannelBandwidth">
+        <v>20000</v>
+      </attr>
+      <attr name="caPrioThreshold">
+        <v>300</v>
+      </attr>
+      <attr name="estCellCapUsableFraction">
+        <v>100</v>
+      </attr>
+      <attr name="lbTpNonQualFraction">
+        <v>35</v>
+      </attr>
+      <attr name="lbTpRankThreshMin">
+        <v>-20</v>
+      </attr>
+      <attr name="ulSCellPriority">
+        <v>5</v>
+      </attr>
+      <attr name="physicalLayerCellIdGroup">
+        <v>100</v>
+      </attr>
+      <attr name="physicalLayerSubCellId">
+        <v>2</v>
+      </attr>
+      <attr name="tac">
+        <v>1</v>
+      </attr>
+      <attr name="dlConfigurableFrequencyStart">
+        <v>0</v>
+      </attr>
+      <attr name="dlInterferenceManagementActive">
+        <v>false</v>
+      </attr>
+      <attr name="ulSrsEnable">
+        <v>false</v>
+      </attr>
+    </objectCreated>
+  </events>
+</notification>

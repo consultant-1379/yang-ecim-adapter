@@ -1,0 +1,6 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <NodeSupport xmlns="urn:com:ericsson:ecim:RmeSupport">
+        <nodeSupportId>1</nodeSupportId>
+    </NodeSupport>
+</ManagedElement>

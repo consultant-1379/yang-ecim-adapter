@@ -1,0 +1,30 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>LTE01dg2ERBS00001</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <CarrierAggregationFunction>
+            <carrierAggregationFunctionId>1</carrierAggregationFunctionId>
+            <caUsageLimit>65535</caUsageLimit>
+            <caPreemptionThreshold>50</caPreemptionThreshold>
+            <sCellActDeactDataThres>100</sCellActDeactDataThres>
+            <sCellActDeactDataThresHyst>90</sCellActDeactDataThresHyst>
+            <sCellScheduleSinrThres>0</sCellScheduleSinrThres>
+            <waitForCaOpportunity>10000</waitForCaOpportunity>
+            <waitForBetterSCellRep>1000</waitForBetterSCellRep>
+            <waitForAdditionalSCellOpportunity>10000</waitForAdditionalSCellOpportunity>
+            <caRateAdjustCoeff>10</caRateAdjustCoeff>
+            <sCellActDeactUlDataThresh>100</sCellActDeactUlDataThresh>
+            <sCellActDeactUlDataThreshHyst>90</sCellActDeactUlDataThreshHyst>
+            <pdcchEnhancedLaForVolte>false</pdcchEnhancedLaForVolte>
+            <sCellSelectionMode>ACK_SEQUENTIAL_SCELL_SELECTION</sCellSelectionMode>
+            <sCellActProhibitTimer>10</sCellActProhibitTimer>
+            <sCellDeactProhibitTimer>200</sCellDeactProhibitTimer>
+            <sCellDeactOutOfCoverageTimer>100</sCellDeactOutOfCoverageTimer>
+            <sCellDeactDelayTimer>50</sCellDeactDelayTimer>
+            <dynamicSCellSelectionMethod>ROUND_ROBIN</dynamicSCellSelectionMethod>
+            <caPreference>NONE</caPreference>
+            <enhancedSelectionOfMimoAndCa>false</enhancedSelectionOfMimoAndCa>
+            <fourLayerMimoPreferred>false</fourLayerMimoPreferred>
+        </CarrierAggregationFunction>
+    </ENodeBFunction>
+</ManagedElement>

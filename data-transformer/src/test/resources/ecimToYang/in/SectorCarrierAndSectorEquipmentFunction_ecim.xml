@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+  <managedElementId>1</managedElementId>
+  <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+    <eNodeBFunctionId>1</eNodeBFunctionId>
+    <SectorCarrier>
+      <sectorCarrierId>1</sectorCarrierId>
+      <availabilityStatus>OFF_LINE</availabilityStatus>
+      <operationalState>DISABLED</operationalState>
+      <sectorFunctionRef>ManagedElement=1,NodeSupport=1,SectorEquipmentFunction=1</sectorFunctionRef>
+      <reservedBy>ManagedElement=1,ENodeBFunction=1,EUtranCellFDD=1</reservedBy>
+      <noOfRxAntennas>2</noOfRxAntennas>
+      <noOfTxAntennas>2</noOfTxAntennas>
+      <noOfUsedRxAntennas>-1</noOfUsedRxAntennas>
+      <noOfUsedTxAntennas>-1</noOfUsedTxAntennas>
+      <partOfSectorPower>100</partOfSectorPower>
+      <maximumTransmissionPower>-1</maximumTransmissionPower>
+      <prsEnabled>true</prsEnabled>
+      <ulForcedTimingAdvanceCommand>0</ulForcedTimingAdvanceCommand>
+      <noOfMutedTxAntennas>0</noOfMutedTxAntennas>
+      <radioTransmitPerformanceMode>DEFAULT</radioTransmitPerformanceMode>
+      <configuredMaxTxPower>20000</configuredMaxTxPower>
+      <txPowerPersistentLock>false</txPowerPersistentLock>
+      <dlCalibrationData struct="DlCalibrationDataRO">
+        <dlCalibrationActiveMethod>NONE</dlCalibrationActiveMethod>
+        <dlCalibrationStatus>INACTIVE</dlCalibrationStatus>
+        <dlCalibrationSupportedMethods>NONE</dlCalibrationSupportedMethods>
+      </dlCalibrationData>
+      <pimcFunctionReference/>
+      <ulPimCancellationMode>EXCLUDED</ulPimCancellationMode>
+      <dlPimCandidate>false</dlPimCandidate>
+      <rfBranchRxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=1</rfBranchRxRef>
+      <rfBranchRxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=2</rfBranchRxRef>
+      <rfBranchRxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=3</rfBranchRxRef>
+      <rfBranchTxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=1</rfBranchTxRef>
+      <rfBranchTxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=2</rfBranchTxRef>
+      <rfBranchTxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=3</rfBranchTxRef>
+      <rfBranchRxRef unset="true"/>
+      <rfBranchTxRef unset="true"/>
+    </SectorCarrier>
+  </ENodeBFunction>
+  <NodeSupport xmlns="urn:com:ericsson:ecim:RmeSupport">
+    <nodeSupportId>1</nodeSupportId>
+    <release>R2A112</release>
+    <supportFunction>true</supportFunction>
+    <userLabel>my node support</userLabel>
+    <SectorEquipmentFunction xmlns="urn:com:ericsson:ecim:RmeSectorEquipmentFunction">
+      <sectorEquipmentFunctionId>1</sectorEquipmentFunctionId>
+      <administrativeState>UNLOCKED</administrativeState>
+      <availabilityStatus>FAILED</availabilityStatus>
+      <configuredOutputPower>20000</configuredOutputPower>
+      <fqBand>0</fqBand>
+      <mixedModeRadio>false</mixedModeRadio>
+      <operationalState>DISABLED</operationalState>
+      <reservedBy>ManagedElement=1,ENodeBFunction=1,SectorCarrier=1</reservedBy>
+      <availableSectorPower>0</availableSectorPower>
+      <noiseFigure>150</noiseFigure>
+      <userLabel>Bob</userLabel>
+      <eUtranFqBands/>
+      <utranFddFqBands>Band II: full on all</utranFddFqBands>
+      <rfBranchRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=1</rfBranchRef>
+      <rfBranchRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=2</rfBranchRef>
+      <rfBranchRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=3</rfBranchRef>
+      <availableHwOutputPower>0</availableHwOutputPower>
+    </SectorEquipmentFunction>
+  </NodeSupport>
+</ManagedElement>

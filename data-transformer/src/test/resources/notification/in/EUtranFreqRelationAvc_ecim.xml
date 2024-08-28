@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <AVC
+      dn="ManagedElement=1,ENodeBFunction=1,EUtranCellFDD=myCell1,EUtranFreqRelation=myFreqRelation1">
+      <attr name="caFreqPriority">
+        <v>4</v>
+      </attr>
+      <attr name="caFreqProportion">
+        <v>100</v>
+      </attr>
+      <attr name="caTriggeredRedirectionActive">
+        <v>true</v>
+      </attr>
+      <attr name="lbA5Thr1RsrpFreqOffset">
+        <v>0</v>
+      </attr>
+      <attr name="lbActivationThreshold">
+        <v>0</v>
+      </attr>
+      <attr name="qOffsetFreq">
+        <v>0</v>
+      </attr>
+      <attr name="eutranFreqToQciProfileRelation">
+        <v>
+          <elem name="qciProfileRef">
+            <v>ManagedElement=SRN1EENB105,ENodeBFunction=1,QciTable=default,QciProfilePredefined=qci9</v>
+          </elem>
+          <elem name="lbQciProfileHandling">
+            <v>ALLOWED</v>
+          </elem>
+        </v>
+        <v>
+          <elem name="qciProfileRef">
+            <v>ManagedElement=SRN1EENB105,ENodeBFunction=1,QciTable=default,QciProfilePredefined=qci1</v>
+          </elem>
+          <elem name="lbQciProfileHandling">
+            <v>ALLOWED</v>
+          </elem>
+        </v>
+      </attr>
+    </AVC>
+  </events>
+</notification>

@@ -1,0 +1,32 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell1</eUtranCellFDDId>
+            <EUtranFreqRelation>
+                <eUtranFreqRelationId>myFreqRelation1</eUtranFreqRelationId>
+                <caFreqPriority>4</caFreqPriority>
+                <caFreqProportion>100</caFreqProportion>
+                <caTriggeredRedirectionActive>true</caTriggeredRedirectionActive>
+                <lbA5Thr1RsrpFreqOffset>0</lbA5Thr1RsrpFreqOffset>
+                <lbActivationThreshold>0</lbActivationThreshold>
+                <qOffsetFreq>0</qOffsetFreq>
+                <eutranFreqToQciProfileRelation>
+                    <qciProfileRef operation="merge">ManagedElement=1,ENodeBFunction=1,QciTable=default,QciProfilePredefined=qci9</qciProfileRef>
+                    <lbQciProfileHandling>ALLOWED</lbQciProfileHandling>
+                </eutranFreqToQciProfileRelation>
+            </EUtranFreqRelation>
+            <EUtranFreqRelation>
+                <eUtranFreqRelationId>myFreqRelation2</eUtranFreqRelationId>
+                <eutranFreqToQciProfileRelation operation="create">
+                    <qciProfileRef>ManagedElement=1,ENodeBFunction=1,QciTable=default,QciProfileOperatorDefined=qci9</qciProfileRef>
+                    <lbQciProfileHandling>ALLOWED</lbQciProfileHandling>
+                </eutranFreqToQciProfileRelation>
+            </EUtranFreqRelation>
+            <EUtranFreqRelation operation="delete">
+                <eUtranFreqRelationId>myFreqRelation3</eUtranFreqRelationId>
+            </EUtranFreqRelation>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

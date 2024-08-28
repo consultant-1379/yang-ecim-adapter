@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SshConfiguration port="2222" socketTimeout="600000" nodeAddress="192.168.100.1" nodePort="22" waitForClose="10000" allowUsersFromListOnly="true">
+    <rules>
+        <rule>
+            <then>
+                <class listener="com.ericsson.ranexplorer.yangecimadapter.netconf.rpc.handler.config.listener.AdapterListener"/>
+            </then>
+        </rule>
+    </rules>
+    <users>
+        <entry>
+            <key>netsim</key>
+            <value>netsim</value>
+        </entry>
+    </users>
+    <subsystems>
+        <subsystem>netconf</subsystem>
+    </subsystems>
+</SshConfiguration>

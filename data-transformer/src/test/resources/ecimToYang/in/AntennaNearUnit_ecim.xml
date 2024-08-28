@@ -1,0 +1,39 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <Equipment xmlns="urn:com:ericsson:ecim:ReqEquipment">
+        <equipmentId>1</equipmentId>
+        <AntennaUnitGroup xmlns="urn:com:ericsson:ecim:ReqAntennaSystem">
+            <antennaUnitGroupId>1</antennaUnitGroupId>
+            <positionInformation>POSITION_INFO 114</positionInformation>
+            <positionInformation unset="true"/>
+            <AntennaNearUnit>
+                <antennaNearUnitId>3</antennaNearUnitId>
+                <anuType>IUANT</anuType>
+                <availabilityStatus>OFF_LINE</availabilityStatus>
+                <availabilityStatus>POWER_OFF</availabilityStatus>
+                <availabilityStatus>OFF_LINE</availabilityStatus>
+                <availabilityStatus>POWER_OFF</availabilityStatus>
+                <hardwareVersion>ABC 1.2.1 XYZ</hardwareVersion>
+                <iuantDeviceType>1</iuantDeviceType>
+                <onUnitUniqueId>uniqueId</onUnitUniqueId>
+                <operationalState>DISABLED</operationalState>
+                <productNumber>PDN 123</productNumber>
+                <selfTestStatus>UNKNOWN</selfTestStatus>
+                <serialNumber>SN 1234554321</serialNumber>
+                <softwareVersion>SWV 2.4.1</softwareVersion>
+                <uniqueId>helloWorld</uniqueId>
+                <administrativeState>UNLOCKED</administrativeState>
+            </AntennaNearUnit>
+            <AntennaNearUnit>
+                <iuantDeviceType unset="true"/>
+                <hardwareVersion unset="true"/>
+                <onUnitUniqueId unset="true"/>
+                <productNumber unset="true"/>
+                <selfTestStatus unset="true"/>
+                <serialNumber unset="true"/>
+                <softwareVersion unset="true"/>
+                <uniqueId unset="true"/>
+            </AntennaNearUnit>
+        </AntennaUnitGroup>
+    </Equipment>
+</ManagedElement>

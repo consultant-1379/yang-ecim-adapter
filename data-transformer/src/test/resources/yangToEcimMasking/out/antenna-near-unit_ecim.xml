@@ -1,0 +1,26 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <Equipment xmlns="urn:com:ericsson:ecim:ReqEquipment">
+        <AntennaUnitGroup xmlns="urn:com:ericsson:ecim:ReqAntennaSystem">
+            <AntennaNearUnit>
+                <iuantDeviceType/>
+                <uniqueId/>
+                <administrativeState/>
+                <RetSubUnit>
+                    <electricalAntennaTilt/>
+                    <iuantAntennaBearing/>
+                    <iuantAntennaModelNumber/>
+                    <iuantAntennaOperatingBand/>
+                    <iuantAntennaSerialNumber/>
+                    <iuantBaseStationId/>
+                    <iuantInstallationDate/>
+                    <iuantInstallersId/>
+                    <iuantSectorId/>
+                    <maxTilt/>
+                    <minTilt/>
+                    <iuantAntennaOperatingGain/>
+                </RetSubUnit>
+            </AntennaNearUnit>
+        </AntennaUnitGroup>
+    </Equipment>
+</ManagedElement>

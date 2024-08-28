@@ -1,0 +1,104 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="0">
+  <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+        <carrier-aggregation-function operation="merge">
+          <pdcch-enhanced-la-for-volte>true</pdcch-enhanced-la-for-volte>
+          <enhanced-selection-of-mimo-and-ca>true</enhanced-selection-of-mimo-and-ca>
+        </carrier-aggregation-function>
+        <eutra-network>
+          <external-enodeb-function operation="merge">
+            <enodeb-plmn-id>
+              <mcc>350</mcc>
+              <mnc>50</mnc>
+              <mnc-length>3</mnc-length>
+            </enodeb-plmn-id>
+            <id>LTE00pERBS00005</id>
+            <enb-id>-35</enb-id>
+            <es-cell-capacity-scaling>90</es-cell-capacity-scaling>
+            <external-eutran-cell-fdd operation="merge">
+              <id>LTE00pERBS00005-1</id>
+              <local-cell-id>3</local-cell-id>
+            </external-eutran-cell-fdd>
+          </external-enodeb-function>
+        </eutra-network>
+        <eutran-cell-fdd operation="merge">
+          <id>LTE01dg2ERBS00001-1</id>
+          <ul-channel-bandwidth>15000</ul-channel-bandwidth>
+          <eutran-freq-relation operation="merge">
+            <id>2</id>
+            <ca-freq-priority>4</ca-freq-priority>
+            <eutran-cell-relation operation="merge">
+              <id>88</id>
+              <coverage-indicator>covers</coverage-indicator>
+              <load-balancing>not-allowed</load-balancing>
+              <s-cell-candidate>allowed</s-cell-candidate>
+              <s-cell-priority>5</s-cell-priority>
+            </eutran-cell-relation>
+          </eutran-freq-relation>
+          <ue-meas-control>
+            <s-measure>-44</s-measure>
+            <report-config-eutra-interfreq-lb>
+              <a5-threshold2-rsrp>-140</a5-threshold2-rsrp>
+            </report-config-eutra-interfreq-lb>
+          </ue-meas-control>
+        </eutran-cell-fdd>
+        <load-balancing-function operation="merge">
+          <lb-threshold>40</lb-threshold>
+          <lb-ceiling>100</lb-ceiling>
+          <lb-rate-offset-coefficient>330</lb-rate-offset-coefficient>
+        </load-balancing-function>
+        <qci-table>
+          <qci-profile-predefined operation="replace">
+            <id>1</id>
+            <qci>0</qci>
+            <priority>0</priority>
+            <dscp>0</dscp>
+            <logical-channel-group-ref/>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>1</qci-subscription-quanta>
+          </qci-profile-predefined>
+          <qci-profile-predefined operation="replace">
+            <id>2</id>
+            <qci>0</qci>
+            <priority>0</priority>
+            <dscp>0</dscp>
+            <logical-channel-group-ref/>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>1</qci-subscription-quanta>
+          </qci-profile-predefined>
+          <qci-profile-predefined operation="replace">
+            <id>3</id>
+            <qci>0</qci>
+            <priority>0</priority>
+            <dscp>0</dscp>
+            <logical-channel-group-ref/>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>2</qci-subscription-quanta>
+          </qci-profile-predefined>
+          <qci-profile-predefined operation="replace">
+            <id>4</id>
+            <qci>0</qci>
+            <priority>0</priority>
+            <dscp>0</dscp>
+            <logical-channel-group-ref/>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>3</qci-subscription-quanta>
+          </qci-profile-predefined>
+          <qci-profile-predefined operation="replace">
+            <id>5</id>
+            <qci>0</qci>
+            <priority>0</priority>
+            <dscp>0</dscp>
+            <logical-channel-group-ref/>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>15</qci-subscription-quanta>
+          </qci-profile-predefined>
+        </qci-table>
+      </enodeb-function>
+    </config>
+  </edit-config>
+</rpc>

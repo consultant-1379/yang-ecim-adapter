@@ -1,0 +1,18 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <EUtranCellFDD>
+            <EUtranFreqRelation>
+                <EUtranCellRelation>
+                    <cellIndividualOffsetEUtran/>
+                    <qOffsetCellEUtran/>
+                    <coverageIndicator/>
+                    <loadBalancing/>
+                    <sCellCandidate/>
+                    <sCellPriority/>
+                    <neighborCellRef/>
+                </EUtranCellRelation>
+            </EUtranFreqRelation>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

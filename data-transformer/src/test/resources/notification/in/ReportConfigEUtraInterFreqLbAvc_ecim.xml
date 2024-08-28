@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <AVC dn="ManagedElement=1,ENodeBFunction=1,EUtranCellFDD=myCell1,UeMeasControl=1,ReportConfigEUtraInterFreqLb=1">
+      <attr name="a5Threshold1Rsrp">
+        <v>-44</v>
+      </attr>
+      <attr name="a5Threshold2Rsrp">
+        <v>-45</v>
+      </attr>
+      <attr name="a5Threshold2Rsrq">
+        <v>-195</v>
+      </attr>
+      <attr name="hysteresisA5">
+        <v>10</v>
+      </attr>
+    </AVC>
+  </events>
+</notification>

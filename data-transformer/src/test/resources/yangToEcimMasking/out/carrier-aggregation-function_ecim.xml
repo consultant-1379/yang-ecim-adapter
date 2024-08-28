@@ -1,0 +1,28 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <CarrierAggregationFunction>
+            <caUsageLimit/>
+            <caPreemptionThreshold/>
+            <sCellActDeactDataThres/>
+            <sCellActDeactDataThresHyst/>
+            <sCellScheduleSinrThres/>
+            <waitForCaOpportunity/>
+            <waitForBetterSCellRep/>
+            <waitForAdditionalSCellOpportunity/>
+            <caRateAdjustCoeff/>
+            <sCellActDeactUlDataThresh/>
+            <sCellActDeactUlDataThreshHyst/>
+            <pdcchEnhancedLaForVolte/>
+            <sCellSelectionMode/>
+            <sCellActProhibitTimer/>
+            <sCellDeactProhibitTimer/>
+            <sCellDeactOutOfCoverageTimer/>
+            <sCellDeactDelayTimer/>
+            <dynamicSCellSelectionMethod/>
+            <caPreference/>
+            <enhancedSelectionOfMimoAndCa/>
+            <fourLayerMimoPreferred/>
+        </CarrierAggregationFunction>
+    </ENodeBFunction>
+</ManagedElement>

@@ -1,0 +1,14 @@
+<enodeb-function>
+  <eutran-cell-fdd>
+    <id>myCell1</id>
+    <ue-meas-control>
+        <s-measure>0</s-measure>
+    </ue-meas-control>
+  </eutran-cell-fdd>
+  <eutran-cell-fdd>
+    <id>myCell2</id>
+    <ue-meas-control operation="merge">
+        <s-measure>0</s-measure>
+    </ue-meas-control>
+  </eutran-cell-fdd>
+</enodeb-function>

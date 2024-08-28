@@ -1,0 +1,22 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <NodeSupport xmlns="urn:com:ericsson:ecim:RmeSupport">
+        <nodeSupportId>1</nodeSupportId>
+        <SectorEquipmentFunction xmlns="urn:com:ericsson:ecim:RmeSectorEquipmentFunction">
+            <sectorEquipmentFunctionId>1</sectorEquipmentFunctionId>
+            <administrativeState>UNLOCKED</administrativeState>
+            <availabilityStatus>FAILED</availabilityStatus>
+            <mixedModeRadio>true</mixedModeRadio>
+            <operationalState>DISABLED</operationalState>
+            <eUtranFqBands>0</eUtranFqBands>
+            <eUtranFqBands>128</eUtranFqBands>
+            <eUtranFqBands>256</eUtranFqBands>
+            <utranFddFqBands>0</utranFddFqBands>
+            <utranFddFqBands>101</utranFddFqBands>
+            <availableHwOutputPower>0</availableHwOutputPower>
+            <rfBranchRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=1</rfBranchRef>
+            <rfBranchRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=2</rfBranchRef>
+            <rfBranchRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=3</rfBranchRef>
+        </SectorEquipmentFunction>
+    </NodeSupport>
+</ManagedElement>

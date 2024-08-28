@@ -1,0 +1,18 @@
+<node-support>
+    <sector-equipment-function>
+        <id>1</id>
+        <administrative-state>unlocked</administrative-state>
+        <availability-status>failed</availability-status>
+        <mixed-mode-radio>true</mixed-mode-radio>
+        <operational-state>disabled</operational-state>
+        <eutran-fq-bands>0</eutran-fq-bands>
+        <eutran-fq-bands>128</eutran-fq-bands>
+        <eutran-fq-bands>256</eutran-fq-bands>
+        <utran-fdd-fq-bands>0</utran-fdd-fq-bands>
+        <utran-fdd-fq-bands>101</utran-fdd-fq-bands>
+        <available-hw-output-power>0</available-hw-output-power>
+        <rf-branch-ref>/reqeqadpt:equipment/reqantadpt:antenna-unit-group[reqantadpt:id='1']/reqantadpt:rf-branch[reqantadpt:id='1']</rf-branch-ref>
+        <rf-branch-ref>/reqeqadpt:equipment/reqantadpt:antenna-unit-group[reqantadpt:id='1']/reqantadpt:rf-branch[reqantadpt:id='2']</rf-branch-ref>
+        <rf-branch-ref>/reqeqadpt:equipment/reqantadpt:antenna-unit-group[reqantadpt:id='1']/reqantadpt:rf-branch[reqantadpt:id='3']</rf-branch-ref>
+    </sector-equipment-function>
+</node-support>

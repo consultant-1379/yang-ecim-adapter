@@ -1,0 +1,21 @@
+<get>
+  <filter type="subtree">
+    <ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+      <managedElementId>LTE01dg2ERBS00001</managedElementId>
+      <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <eNBId/>
+        <LoadBalancingFunction>
+          <loadBalancingFunctionId>1</loadBalancingFunctionId>
+          <lbThreshold/>
+          <lbCeiling/>
+          <lbRateOffsetCoefficient/>
+          <lbRateOffsetLoadThreshold/>
+          <lbCaThreshold/>
+          <lbDiffCaOffset/>
+          <lbCaCapHysteresis/>
+        </LoadBalancingFunction>
+      </ENodeBFunction>
+    </ManagedElement>
+  </filter>
+</get>

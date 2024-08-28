@@ -1,0 +1,32 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell1</eUtranCellFDDId>
+            <UeMeasControl>
+                <ueMeasControlId>1</ueMeasControlId>
+                <ReportConfigEUtraInterFreqLb>
+                    <reportConfigEUtraInterFreqLbId>1</reportConfigEUtraInterFreqLbId>
+                    <a5Threshold1Rsrp>-44</a5Threshold1Rsrp>
+                    <a5Threshold2Rsrp>-45</a5Threshold2Rsrp>
+                    <a5Threshold2Rsrq>-195</a5Threshold2Rsrq>
+                    <hysteresisA5>10</hysteresisA5>
+                </ReportConfigEUtraInterFreqLb>
+            </UeMeasControl>
+        </EUtranCellFDD>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell2</eUtranCellFDDId>
+            <UeMeasControl>
+                <ueMeasControlId>1</ueMeasControlId>
+                <ReportConfigEUtraInterFreqLb operation="merge">
+                    <reportConfigEUtraInterFreqLbId>1</reportConfigEUtraInterFreqLbId>
+                    <a5Threshold1Rsrp>-44</a5Threshold1Rsrp>
+                    <a5Threshold2Rsrp>-45</a5Threshold2Rsrp>
+                    <a5Threshold2Rsrq>-195</a5Threshold2Rsrq>
+                    <hysteresisA5>10</hysteresisA5>
+                </ReportConfigEUtraInterFreqLb>
+            </UeMeasControl>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

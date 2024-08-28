@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <AVC dn="ManagedElement=1,ENodeBFunction=1,QciTable=default,QciProfileOperatorDefined=myQci10">
+      <attr name="qciSubscriptionQuanta">
+        <v>110</v>
+      </attr>
+    </AVC>
+  </events>
+</notification>
+]]>]]>

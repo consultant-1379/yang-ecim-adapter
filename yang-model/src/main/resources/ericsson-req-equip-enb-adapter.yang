@@ -1,0 +1,29 @@
+module "ericsson-req-equip-enb-adapter" {
+    yang-version 1.1;
+    namespace "urn:rdns:com:ericsson:oammodel:ericsson-req-equip-enb-adapter";
+    prefix reqeqadpt;
+
+    import ericsson-yang-extensions { prefix "yexte"; }
+
+    organization "Ericsson AB";
+    contact "Contact Ericsson first line support";
+    description "This module represents the eNodeB ReqEquipment ECIM fragment to facilitate
+        a predev engagement with customer.
+
+        Copyright (c) 2018 Ericsson AB. All rights reserved.
+    ";
+
+    revision "2018-08-13" {
+        description "Initial version based on ECIM ReqEquipment fragment (17A)
+                release=0 revision=A version=1";
+        yexte:version "1";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    container equipment {
+        description "Equipment module";
+        yexte:is-system-created;
+    }
+
+}

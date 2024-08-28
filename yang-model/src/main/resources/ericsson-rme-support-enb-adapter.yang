@@ -1,0 +1,37 @@
+module "ericsson-rme-support-enb-adapter" {
+    yang-version 1.1;
+    namespace "urn:rdns:com:ericsson:oammodel:ericsson-rme-support-enb-adapter";
+    prefix rmesadpt;
+
+    import ericsson-yang-extensions { prefix "yexte"; }
+
+    organization "Ericsson AB";
+    contact "Contact Ericsson first line support";
+    description "This module represents the eNodeB RmeSupport ECIM fragment to facilitate
+        a predev engagement with customer.
+
+        Copyright (c) 2018 Ericsson AB. All rights reserved.
+    ";
+
+    revision "2018-08-02" {
+        description "Uses extensions from the ericsson-yang-extensions module
+            instead of the ericsson-adapter-yang-extensions module.";
+        yexte:version "2";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    revision "2018-07-10" {
+        description "Initial version based on ECIM RmeSupport fragment (17A)
+                release=0 revision='' version=1";
+        yexte:version "1";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    container node-support {
+        description "Root for the node-support branch";
+        yexte:is-system-created;
+    }
+
+}

@@ -1,0 +1,27 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtraNetwork>
+            <eUtraNetworkId>1</eUtraNetworkId>
+            <ExternalENodeBFunction>
+                <externalENodeBFunctionId>1</externalENodeBFunctionId>
+                <ExternalEUtranCellFDD>
+                    <externalEUtranCellFDDId>myCell1</externalEUtranCellFDDId>
+                    <localCellId>1</localCellId>
+                </ExternalEUtranCellFDD>
+                <ExternalEUtranCellFDD operation="merge">
+                    <externalEUtranCellFDDId>myCell2</externalEUtranCellFDDId>
+                    <localCellId>2</localCellId>
+                </ExternalEUtranCellFDD>
+                <ExternalEUtranCellFDD operation="create">
+                    <externalEUtranCellFDDId>myCell3</externalEUtranCellFDDId>
+                    <localCellId>3</localCellId>
+                </ExternalEUtranCellFDD>
+                <ExternalEUtranCellFDD operation="delete">
+                    <externalEUtranCellFDDId>myCell10</externalEUtranCellFDDId>
+                </ExternalEUtranCellFDD>
+            </ExternalENodeBFunction>
+        </EUtraNetwork>
+    </ENodeBFunction>
+</ManagedElement>

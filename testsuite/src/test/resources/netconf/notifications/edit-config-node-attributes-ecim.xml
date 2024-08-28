@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="%s">
+  <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+        <managedElementId>1</managedElementId>
+        <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+          <eNodeBFunctionId>1</eNodeBFunctionId>
+          <LoadBalancingFunction operation="merge">
+            <loadBalancingFunctionId>1</loadBalancingFunctionId>
+            <lbThreshold>%s</lbThreshold>
+            <lbCeiling>%s</lbCeiling>
+          </LoadBalancingFunction>
+          <QciTable>
+            <qciTableId>default</qciTableId>
+            <QciProfileOperatorDefined operation="merge">
+              <qciProfileOperatorDefinedId>shin1</qciProfileOperatorDefinedId>
+              <dlMaxWaitingTime>%s</dlMaxWaitingTime>
+            </QciProfileOperatorDefined>
+          </QciTable>
+        </ENodeBFunction>
+      </ManagedElement>
+    </config>
+  </edit-config>
+</rpc>

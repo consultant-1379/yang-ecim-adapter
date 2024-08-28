@@ -1,0 +1,48 @@
+module ericsson-adapter-yang-extensions {
+    yang-version 1.1;
+    namespace "urn:rdns:com:ericsson:oammodel:ericsson-adapter-yang-extensions";
+    prefix ayexte ;
+
+    import ericsson-yang-extensions { prefix "yexte"; }
+
+    organization  "Ericsson AB";
+    contact "Ericsson first line support";
+    description "The module defines Ericsson proprietary YANG extensions
+        that are used by the adapter but not yet part of the
+        ericsson-yang-extensions module.
+
+    Copyright (c) 2018 Ericsson AB. All rights reserved.";
+
+    revision "2018-08-02" {
+        description "Removed the extensions already defined in the
+            ericsson-yang-extensions module";
+        yexte:version "2";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    revision "2018-03-12" {
+        description "Initial revision. Based on ericsson-yang-extensions
+            module, version 2, release 2, correction 0.";
+        yexte:version "1";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    extension restricted {
+        description
+            "Indicates that the value for the data node can only be set when its
+            parent data node is being created. To change the value after that, the
+            parent data node must be deleted and recreated with the data node
+            having the new value.
+
+            The restricted extension is only applicable to nodes that have
+            config=true.
+
+            The statement MUST only be a substatement of the leaf, leaf-list,
+            container, list statements.
+            Zero or one restricted statement is allowed per parent statement.
+            NO substatements are allowed.";
+    }
+
+}

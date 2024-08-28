@@ -1,0 +1,22 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="0">
+    <edit-config>
+        <target>
+            <running />
+        </target>
+        <config>
+            <ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+                <managedElementId>LTE01dg2ERBS00001</managedElementId>
+                <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+                    <eNodeBFunctionId>1</eNodeBFunctionId>
+                    <QciTable>
+                        <qciTableId>default</qciTableId>
+                        <QciProfilePredefined>
+                            <qciProfilePredefinedId>9</qciProfilePredefinedId>
+                            <qciSubscriptionQuanta>%s</qciSubscriptionQuanta>
+                        </QciProfilePredefined>
+                    </QciTable>
+                </ENodeBFunction>
+            </ManagedElement>
+        </config>
+    </edit-config>
+</rpc>

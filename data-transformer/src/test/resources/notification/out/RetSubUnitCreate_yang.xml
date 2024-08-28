@@ -1,0 +1,13 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+    <eventTime>2018-08-15T09:27:16+00:00</eventTime>
+    <netconf-config-change xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-notifications">
+        <changed-by>
+            <server/>
+        </changed-by>
+        <datastore>running</datastore>
+        <edit>
+            <target xmlns:reqeqadpt="urn:rdns:com:ericsson:oammodel:ericsson-req-equip-enb-adapter" xmlns:reqantadpt="urn:rdns:com:ericsson:oammodel:ericsson-req-antenna-enb-adapter">/reqeqadpt:equipment/reqantadpt:antenna-unit-group[reqantadpt:id='3']/reqantadpt:antenna-near-unit[reqantadpt:id='1']/reqantadpt:ret-sub-unit[reqantadpt:id='2']</target>
+            <operation>create</operation>
+        </edit>
+    </netconf-config-change>
+</notification>

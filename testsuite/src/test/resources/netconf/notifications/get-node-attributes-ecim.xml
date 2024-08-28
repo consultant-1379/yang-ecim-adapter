@@ -1,0 +1,35 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="0">
+  <get>
+    <filter xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+      <ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+        <managedElementId>LTE01dg2ERBS00001</managedElementId>
+        <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+          <eNodeBFunctionId>1</eNodeBFunctionId>
+          <LoadBalancingFunction>
+            <loadBalancingFunctionId>1</loadBalancingFunctionId>
+            <lbThreshold/>
+            <lbCeiling/>
+          </LoadBalancingFunction>
+          <QciTable>
+            <qciTableId>default</qciTableId>
+            <QciProfileOperatorDefined>
+              <qciProfileOperatorDefinedId>shin1</qciProfileOperatorDefinedId>
+              <dlMaxWaitingTime/>
+            </QciProfileOperatorDefined>
+          </QciTable>
+          <SectorCarrier>
+            <sectorCarrierId>2</sectorCarrierId>
+            <configuredMaxTxPower/>
+          </SectorCarrier>
+        </ENodeBFunction>
+        <NodeSupport xmlns="urn:com:ericsson:ecim:RmeSupport">
+          <nodeSupportId>1</nodeSupportId>
+          <SectorEquipmentFunction xmlns="urn:com:ericsson:ecim:RmeSectorEquipmentFunction">
+            <sectorEquipmentFunctionId>1</sectorEquipmentFunctionId>
+            <mixedModeRadio/>
+          </SectorEquipmentFunction>
+        </NodeSupport>
+      </ManagedElement>
+    </filter>
+  </get>
+</rpc>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ericsson.ranexplorer.yangecimadapter</groupId>
+    <artifactId>yang-ecim-adapter</artifactId>
+    <packaging>pom</packaging>
+    <version>1.1.65-SNAPSHOT</version>
+
+    <properties>
+        <target.java.version>1.8</target.java.version>
+        <ericsson.scm.url>scm:git:[fetch=]ssh://gerritmirror-ha.lmera.ericsson.se:29418/OSS/RanExplorer/${project.artifactId}[push=]ssh://gerrit.ericsson.se:29418/OSS/RanExplorer/${project.artifactId}</ericsson.scm.url>
+        <nexus.url>https://arm101-eiffel004.lmera.ericsson.se:8443/nexus</nexus.url>
+
+        <!-- Skip deploying of any artifacts as we are building a docker image instead.
+             We just want to use the maven release plugin to tag the gerrit repo -->
+        <maven.deploy.skip>true</maven.deploy.skip>
+
+        <docker.repo>armdocker.rnd.ericsson.se/proj-ranexplorer</docker.repo>
+        <docker.base.name>yang-ecim-adapter-base</docker.base.name>
+        <docker.image.name>yang-ecim-adapter</docker.image.name>
+        <docker.tag>latest</docker.tag>
+
+        <sonar.sources>pom.xml,src</sonar.sources>
+        <sonar.tests />
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <version.cba.netconf.manager>1.32.1</version.cba.netconf.manager>
+        <version.mediation.transport.api>1.14.1</version.mediation.transport.api>
+        <version.mediation.ssh.transport.library>1.16.1</version.mediation.ssh.transport.library>
+        <version.mediation.tls.transport.library>1.15.3</version.mediation.tls.transport.library>
+    </properties>
+
+    <modules>
+        <module>netconf-client</module>
+        <module>netconf-rpc-handler</module>
+        <module>yang-model</module>
+        <module>adapter-server</module>
+        <module>common-services</module>
+        <module>data-transformer</module>
+        <module>docker</module>
+        <module>testsuite</module>
+        <module>image</module>
+        <module>onap</module>
+        <module>metrics-hander</module>
+    </modules>
+
+	<build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.5.3</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.5.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>1.4.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${target.java.version}</source>
+                    <target>${target.java.version}</target>
+                </configuration>
+            </plugin>
+		</plugins>	
+	</build>		
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.25</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <scm>
+        <developerConnection>${ericsson.scm.url}</developerConnection>
+        <connection>${ericsson.scm.url}</connection>
+        <tag>yang-ecim-adapter-1.0.1-SNAPSHOT</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>releases</id>
+            <name>Release repo</name>
+            <url>${nexus.url}/content/repositories/releases</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshots</name>
+            <url>${nexus.url}/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

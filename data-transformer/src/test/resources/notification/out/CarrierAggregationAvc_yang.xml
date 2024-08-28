@@ -1,0 +1,93 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <netconf-config-change xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-notifications">
+    <changed-by>
+      <server/>
+    </changed-by>
+    <datastore>running</datastore>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:ca-usage-limit</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:ca-preemption-threshold</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-act-deact-data-thres</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-act-deact-data-thres-hyst</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-schedule-sinr-thres</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:wait-for-ca-opportunity</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:wait-for-better-s-cell-rep</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:wait-for-additional-s-cell-opportunity</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:ca-rate-adjust-coeff</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-act-deact-ul-data-thresh</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-act-deact-ul-data-thresh-hyst</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:pdcch-enhanced-la-for-volte</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-selection-mode</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-act-prohibit-timer</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-deact-prohibit-timer</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-deact-out-of-coverage-timer</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:s-cell-deact-delay-timer</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:dynamic-s-cell-selection-method</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:ca-preference</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:enhanced-selection-of-mimo-and-ca</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:carrier-aggregation-function/lrtadpt:four-layer-mimo-preferred</target>
+      <operation>merge</operation>
+    </edit>
+  </netconf-config-change>
+</notification>

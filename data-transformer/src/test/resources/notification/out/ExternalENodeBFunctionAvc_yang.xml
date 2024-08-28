@@ -1,0 +1,21 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <netconf-config-change xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-notifications">
+    <changed-by>
+      <server/>
+    </changed-by>
+    <datastore>running</datastore>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutra-network/lrtadpt:external-enodeb-function[lrtadpt:id='1']/lrtadpt:enb-id</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutra-network/lrtadpt:external-enodeb-function[lrtadpt:id='1']/lrtadpt:es-cell-capacity-scaling</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutra-network/lrtadpt:external-enodeb-function[lrtadpt:id='1']/lrtadpt:enodeb-plmn-id</target>
+      <operation>merge</operation>
+    </edit>
+  </netconf-config-change>
+</notification>

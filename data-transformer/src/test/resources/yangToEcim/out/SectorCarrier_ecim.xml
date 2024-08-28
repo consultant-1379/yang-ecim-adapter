@@ -1,0 +1,30 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <SectorCarrier>
+            <sectorCarrierId>1</sectorCarrierId>
+            <availabilityStatus>OFF_LINE</availabilityStatus>
+            <operationalState>ENABLED</operationalState>
+            <sectorFunctionRef>ManagedElement=1,NodeSupport=1,SectorEquipmentFunction=1</sectorFunctionRef>
+            <noOfRxAntennas>2</noOfRxAntennas>
+            <noOfTxAntennas>2</noOfTxAntennas>
+            <maximumTransmissionPower>-1</maximumTransmissionPower>
+            <prsEnabled>true</prsEnabled>
+            <ulForcedTimingAdvanceCommand>0</ulForcedTimingAdvanceCommand>
+            <noOfMutedTxAntennas>0</noOfMutedTxAntennas>
+            <radioTransmitPerformanceMode>DEFAULT</radioTransmitPerformanceMode>
+            <configuredMaxTxPower>-20000</configuredMaxTxPower>
+            <txPowerPersistentLock>false</txPowerPersistentLock>
+            <dlCalibrationData>
+                <dlCalibrationActiveMethod>NONE</dlCalibrationActiveMethod>
+                <dlCalibrationStatus>INACTIVE</dlCalibrationStatus>
+                <dlCalibrationSupportedMethods>NONE</dlCalibrationSupportedMethods>
+            </dlCalibrationData>
+            <rfBranchRxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=1</rfBranchRxRef>
+            <rfBranchRxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=2</rfBranchRxRef>
+            <rfBranchTxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=2</rfBranchTxRef>
+            <rfBranchTxRef>ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=3</rfBranchTxRef>
+        </SectorCarrier>
+    </ENodeBFunction>
+</ManagedElement>

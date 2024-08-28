@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="%s">
+    <create-subscription xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+        <filter type="subtree">
+            <enodeb-function>
+                <sector-carrier/>
+            </enodeb-function>
+            <node-support>
+                <sector-equipment-function/>
+            </node-support>
+        </filter>
+    </create-subscription>
+</rpc>

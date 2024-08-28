@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="%s">
+  <create-subscription xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+    <filter type="subtree">
+        <enodeb-function>
+          <load-balancing-function>
+            <lb-threshold/>
+            <lb-ceiling/>
+            <lb-rate-offset-coefficient/>
+            <lb-rate-offset-load-threshold/>
+            <lb-ca-threshold/>
+            <lb-diff-ca-offset/>
+            <lb-ca-cap-hysteresis/>
+          </load-balancing-function>
+        </enodeb-function>
+    </filter>
+  </create-subscription>
+</rpc>

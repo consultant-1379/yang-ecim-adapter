@@ -1,0 +1,20 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell1</eUtranCellFDDId>
+            <UeMeasControl>
+                <ueMeasControlId>1</ueMeasControlId>
+                <sMeasure>0</sMeasure>
+            </UeMeasControl>
+        </EUtranCellFDD>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell2</eUtranCellFDDId>
+            <UeMeasControl operation="merge">
+                <ueMeasControlId>1</ueMeasControlId>
+                <sMeasure>0</sMeasure>
+            </UeMeasControl>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

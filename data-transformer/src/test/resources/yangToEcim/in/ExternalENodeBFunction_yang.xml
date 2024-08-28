@@ -1,0 +1,37 @@
+<enodeb-function>
+  <eutra-network>
+    <external-enodeb-function>
+      <id>1</id>
+      <enb-id>11</enb-id>
+      <es-cell-capacity-scaling>1000</es-cell-capacity-scaling>
+      <enodeb-plmn-id>
+        <mcc>111</mcc>
+        <mnc>02</mnc>
+        <mnc-length>2</mnc-length>
+      </enodeb-plmn-id>
+    </external-enodeb-function>
+    <external-enodeb-function operation="merge">
+      <id>2</id>
+      <enb-id>22</enb-id>
+      <es-cell-capacity-scaling>2000</es-cell-capacity-scaling>
+      <enodeb-plmn-id>
+        <mcc>222</mcc>
+        <mnc>02</mnc>
+        <mnc-length>2</mnc-length>
+      </enodeb-plmn-id>
+    </external-enodeb-function>
+    <external-enodeb-function operation="create">
+      <id>3</id>
+      <enb-id>33</enb-id>
+      <es-cell-capacity-scaling>3000</es-cell-capacity-scaling>
+      <enodeb-plmn-id>
+        <mcc>333</mcc>
+        <mnc>03</mnc>
+        <mnc-length>2</mnc-length>
+      </enodeb-plmn-id>
+    </external-enodeb-function>
+    <external-enodeb-function operation="delete">
+      <id>10</id>
+    </external-enodeb-function>
+  </eutra-network>
+</enodeb-function>

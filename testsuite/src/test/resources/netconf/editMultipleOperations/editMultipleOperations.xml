@@ -1,0 +1,45 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="0">
+  <edit-config>
+    <target>
+      <running />
+    </target>
+    <config>
+      <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+        <eutran-cell-fdd operation="create">
+          <id>15</id>
+          <cell-id>92</cell-id>
+          <earfcndl>7265</earfcndl>
+          <earfcnul>25265</earfcnul>
+          <physical-layer-cell-id-group>41</physical-layer-cell-id-group>
+          <physical-layer-sub-cell-id>0</physical-layer-sub-cell-id>
+          <tac>29761</tac>
+          <eutran-freq-relation>
+            <id>1</id>
+            <eutran-cell-relation>
+              <id>1</id>
+              <neighbor-cell-ref>/enodeb-function/eutra-network/external-enodeb-function[id='LTE02ERBS00029']/external-eutran-cell-fdd[id='LTE02ERBS00029-4']</neighbor-cell-ref>
+            </eutran-cell-relation>
+            <eutran-freq-to-qci-profile-relation>
+              <qci-profile-ref>/enodeb-function/qci-table/qci-profile-predefined[id='1']</qci-profile-ref>
+            </eutran-freq-to-qci-profile-relation>
+          </eutran-freq-relation>
+        </eutran-cell-fdd>
+        <eutran-cell-fdd operation="delete">
+          <id>13</id>
+        </eutran-cell-fdd>
+        <load-balancing-function operation="merge">
+          <lb-threshold>%s</lb-threshold>
+        </load-balancing-function>
+        <load-balancing-function operation="replace">
+          <lb-ceiling>%s</lb-ceiling>
+        </load-balancing-function>
+        <qci-table>
+          <qci-profile-predefined operation="merge">
+            <id>5</id>
+            <logical-channel-group-ref>1</logical-channel-group-ref>
+          </qci-profile-predefined>
+        </qci-table>
+      </enodeb-function>
+    </config>
+  </edit-config>
+</rpc>

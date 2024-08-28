@@ -1,0 +1,249 @@
+module "ericsson-rme-sef-enb-adapter" {
+    yang-version 1.1;
+    namespace "urn:rdns:com:ericsson:oammodel:ericsson-rme-sef-enb-adapter";
+    prefix rsefadpt;
+
+    import ericsson-yang-extensions { prefix "yexte"; }
+
+    organization "Ericsson AB";
+    contact "Contact Ericsson first line support";
+    description "This module represents the eNodeB RmeSectorEquipmentFunction
+        ECIM fragment to facilitate a predev engagement with customer.
+
+        Copyright (c) 2018 Ericsson AB. All rights reserved.
+    ";
+
+    revision "2018-08-20" {
+        description "Added rf-branch-ref due to inclusion of ericsson-req-antenna-enb-adapter
+            and ericsson-req-equip-enb-adapter models in scope";
+        yexte:version "3";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    revision "2018-08-02" {
+        description "Uses extensions from the ericsson-yang-extensions module
+            instead of the ericsson-adapter-yang-extensions module.";
+        yexte:version "2";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    revision "2018-07-10" {
+        description "Initial version based on ECIM RmeSupport fragment (17A)
+                release=12 revision=A version=3";
+        yexte:version "1";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    typedef adm-state {
+        type enumeration {
+            enum locked {
+                value 0;
+                description "The resource is administratively prohibited from performing services
+                    for its users.";
+            }
+            enum unlocked {
+                value 1;
+                description "The resource is administratively permitted to perform services
+                    for its users.
+                    This is independent of its inherent operability.";
+            }
+            enum shuttingdown {
+                value 2;
+                description "Use of the resource is administratively permitted to existing instances
+                    of use only.
+                    While the system remains in the shutting down state the manager may at any time
+                    cause the managed object to revert to the locked state.";
+            }
+        }
+    }
+    
+    typedef avail-status {
+        type enumeration {
+            enum in-test {
+                value 0;
+                description "The resource is undergoing a test procedure.
+                    If the administrative state is locked or shutting down, normal users are
+                    prevented from using the resource.";
+            }
+            enum failed {
+                value 1;
+                description "The resource has an internal fault that prevents it from operating.";
+            }
+            enum power-off {
+                value 2;
+                description "The resource requires power to be applied and is not powered on.";
+            }
+            enum off-line {
+                value 3;
+                description "The resource requires a routine operation to be performed.
+                    This routine operation is to place the resource online and make it available
+                    for use. The operation may be manual or automatic, or both. The operational
+                    state is disabled.";
+            }
+            enum off-duty {
+                value 4;
+                description "The resource has been made inactive by an internal control process.";
+            }
+            enum dependency {
+                value 5;
+                description "The resource cannot operate because some other resource on which it depends
+                    is unavailable.";
+            }
+            enum degraded {
+                value 6;
+                description "The service available from the resource is degraded in some respect.";
+            }
+            enum not-installed {
+                value 7;
+                description "The resource represented by the managed object is not present, or is incomplete.";
+            }
+            enum log-full {
+                value 8;
+                description "Indicates a log full condition.
+                    The semantics are defined in CCITT Rec. X.735 | ISO/IEC 10164-6.";
+            }
+            enum dependency-locked {
+                value 9;
+                description "The administrative state of a resource that this resource depends on is locked
+                    or the availability status of the other resource is dependency locked.";
+            }
+            enum dependency-failed {
+                value 10;
+                description "The availability status of a resource that this resource depends
+                    on is failed or dependency failed.";
+            }
+            enum dependency-shuttingdown {
+                value 11;
+                description "The administrative state of a resource that this resource depends on is shutting down.
+                    or the availability status of the other resource is dependency shutting down.";
+            }
+        }
+    }
+
+    typedef oper-state {
+        type enumeration {
+            enum disabled {
+                value 0;
+                description "The resource is totally inoperable.";
+            }
+            enum enabled {
+                value 1;
+                description "The resource is partially or fully operable.";
+            }
+        }
+    }
+
+    container node-support {
+        description "Root for the NodeSupport branch";
+        yexte:is-system-created;
+
+        list sector-equipment-function {
+            key "id";
+            description "The list entry serves as a mapping between the cell and the RBS equipment
+                used to provide coverage in a certain geographical area. The list entry
+                also controls the maximum output power of the sector.";
+
+            leaf id {
+                type string;
+                description "A user friendly identifier for the sector equipment function.";
+            }
+
+            leaf administrative-state {
+                type adm-state; // isNillable
+                default "locked";
+                description "The administrative state of the sector equipment function list entry";
+            }
+
+            leaf-list availability-status {
+                type avail-status;
+                config false;
+                description "The availability status. It contains details about ../operational-state.
+                    This leaf is set by the application in the eNodeB.";
+            }
+
+            leaf mixed-mode-radio {
+                type boolean; // isNillable
+                default false;
+                description "Whether or not any radio unit related to this list entry is also managed
+                    by an additional physically-connected ME. Ensures dual Operation and Maintenance
+                    of shared radio unit.
+
+                    Note: Has no relation to number of standards the radio unit handles.
+
+                    Takes-effect: Object unlocked";
+                yexte:takes-effect "Object unlocked";
+            }
+
+            leaf operational-state {
+                type oper-state; //isNillable
+                config false;
+                description "The operational state. This leaf is set by the application in the eNodeB.";
+            }
+
+            leaf-list eutran-fq-bands {
+                type string {
+                    length "0..256";
+                }
+                config false;
+                max-elements 256;
+                description "List of LTE frequency bands that the hardware associated with
+                    sector-equipment-function list entry supports.
+
+                    If a frequency band is only partially supported by some associated rf-branches,
+                    support for this band is explicitly displayed for each rf-branch.
+
+                    See CPI for more information.
+
+                    Note: If HW does not support E-UTRA frequency bands, the list is empty.";
+            }
+
+            leaf-list utran-fdd-fq-bands {
+                type string {
+                    length "0..256";
+                }
+                config false;
+                max-elements 256;
+                description "List of UTRAN frequency bands that the hardware associated with
+                    sector-equipment-function list entry supports.";
+            }
+
+            leaf available-hw-output-power {
+                type uint32 {
+                    range "0..10000000";
+                }
+                units "mW";
+                config false;
+                description "Sum of HW output power capability for all radio HW in the sector.
+                    Not dependent on the availability of output power HWAC, therefore RAT power
+                    demands are not necessarily available.
+                    Note: If the sector is equipped with several RU types it is not possible to
+                    calculate the available output power for each TX port in the sector.";
+            }
+
+            leaf-list rf-branch-ref {
+                type instance-identifier;
+                must 're-match(.,"/.*equipment/.*antenna-unit-group\[.*id=.+\]/.*rf-branch\[.*id=.+\]")' {
+                    description "The instance identifier must point at an rf-branch list entry.
+
+                    An example of a valid value is
+                    /reqeqadpt:equipment/reqantadpt:antenna-unit-group[reqantadpt:id='3']/reqantadpt:rf-branch[reqantadpt:id='2']
+
+                    Note: The expression above is given only as guidance for a northbound user.
+                    Values supplied for this leaf are not validated by the adapter against
+                    this expression.";
+                }
+                max-elements 24;
+                description "Reference to the rf-branch list entry being reserved.
+                    Takes effect: Next list entry unlocked.
+                    Precondition: Locked list entry.";
+                yexte:takes-effect "Next list entry unlocked.";
+                yexte:precondition "Locked list entry.";
+            }
+        }
+
+    }
+
+}

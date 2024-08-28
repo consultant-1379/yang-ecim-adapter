@@ -1,0 +1,36 @@
+#!/bin/bash
+
+user=ericsson
+group=ericsson
+jar_file=adapter-server-${project.version}.jar
+install_dir=/opt/ericsson/adapter
+
+echo "Creating user ${user}"
+useradd -m --user-group ${user}
+echo "${user}:${user}" | chpasswd
+
+echo "Installing adapter files"
+mkdir -p ${install_dir}/bin ${install_dir}/conf ${install_dir}/lib
+mv /tmp/${jar_file} ${install_dir}/lib/
+mv /tmp/logback.xml ${install_dir}/conf/
+mv /tmp/init_params ${install_dir}/conf/
+mv /tmp/metrics.readme ${install_dir}/conf/
+mv /tmp/run.sh ${install_dir}/bin/
+mv /tmp/adapter.service /etc/systemd/system/
+chmod +x ${install_dir}/bin/*
+systemctl enable adapter
+
+echo "Changing ownership of adapter"
+chown -R ${user}:${group} ${install_dir}/..
+
+echo "Enabling sudo for user '${user}'"
+echo "${user} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${user}
+
+echo "Changing java random source"
+sed -i 's#securerandom.source=.*#securerandom.source=file:/dev/urandom#' /etc/java-8-openjdk/security/java.security
+
+echo "Allow use of privileged ports with setcap"
+java_binary=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+setcap 'cap_net_bind_service=+ep' ${java_binary}
+getcap ${java_binary}
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+    <eventTime>2018-08-13T10:48:42+00:00</eventTime>
+    <events dnPrefix="" xmlns="urn:ericsson:com:netconf:notification:1.0">
+        <AVC dn="ManagedElement=1,Equipment=1,AntennaUnitGroup=1,RfBranch=1">
+            <attr name="dlTrafficDelay">
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+                <v>-1</v>
+            </attr>
+        </AVC>
+    </events>
+</notification>

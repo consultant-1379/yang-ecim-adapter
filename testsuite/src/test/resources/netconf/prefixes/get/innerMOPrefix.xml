@@ -1,0 +1,7 @@
+<get>
+    <filter type="subtree">
+        <adapter:enodeb-function xmlns:adapter="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+            <adapter:enb-id/>
+        </adapter:enodeb-function>
+    </filter>
+</get>

@@ -1,0 +1,36 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <Equipment xmlns="urn:com:ericsson:ecim:ReqEquipment">
+        <equipmentId>1</equipmentId>
+        <AntennaUnitGroup xmlns="urn:com:ericsson:ecim:ReqAntennaSystem">
+            <antennaUnitGroupId>1</antennaUnitGroupId>
+            <RfBranch>
+                <rfBranchId>1</rfBranchId>
+                <dlAttenuation>1</dlAttenuation>
+                <dlAttenuation>5</dlAttenuation>
+                <dlAttenuation>11</dlAttenuation>
+                <dlAttenuation>5</dlAttenuation>
+                <dlAttenuation>1</dlAttenuation>
+                <dlTrafficDelay>-1</dlTrafficDelay>
+                <dlTrafficDelay>2</dlTrafficDelay>
+                <dlTrafficDelay>10</dlTrafficDelay>
+                <dlTrafficDelay>-1</dlTrafficDelay>
+                <dlTrafficDelay>-1</dlTrafficDelay>
+                <dlTrafficDelay>-1</dlTrafficDelay>
+                <dlTrafficDelay>100</dlTrafficDelay>
+                <ulAttenuation>6</ulAttenuation>
+                <ulAttenuation>11</ulAttenuation>
+                <ulAttenuation>3</ulAttenuation>
+                <ulAttenuation>11</ulAttenuation>
+                <ulAttenuation>1</ulAttenuation>
+                <ulTrafficDelay>-1</ulTrafficDelay>
+                <ulTrafficDelay>-1</ulTrafficDelay>
+                <ulTrafficDelay>-1</ulTrafficDelay>
+            </RfBranch>
+            <RfBranch>
+                <dlAttenuation unset="true"/>
+                <ulAttenuation unset="true"/>
+            </RfBranch>
+        </AntennaUnitGroup>
+    </Equipment>
+</ManagedElement>

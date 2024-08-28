@@ -1,0 +1,64 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell1</eUtranCellFDDId>
+            <ulChannelBandwidth>20000</ulChannelBandwidth>
+            <cellSubscriptionCapacity>100000</cellSubscriptionCapacity>
+            <cellDownlinkCaCapacity>200000</cellDownlinkCaCapacity>
+            <dlChannelBandwidth>20000</dlChannelBandwidth>
+            <caPrioThreshold>300</caPrioThreshold>
+            <estCellCapUsableFraction>100</estCellCapUsableFraction>
+            <lbTpNonQualFraction>35</lbTpNonQualFraction>
+            <lbTpRankThreshMin>-20</lbTpRankThreshMin>
+            <ulSCellPriority>5</ulSCellPriority>
+            <physicalLayerCellIdGroup>100</physicalLayerCellIdGroup>
+            <physicalLayerSubCellId>2</physicalLayerSubCellId>
+            <tac>1</tac>
+            <dlConfigurableFrequencyStart>0</dlConfigurableFrequencyStart>
+            <dlInterferenceManagementActive>false</dlInterferenceManagementActive>
+            <ulSrsEnable>false</ulSrsEnable>
+            <sectorCarrierRef>ManagedElement=1,ENodeBFunction=1,SectorCarrier=1</sectorCarrierRef>
+        </EUtranCellFDD>
+        <EUtranCellFDD operation="merge">
+            <eUtranCellFDDId>myCell2</eUtranCellFDDId>
+            <ulChannelBandwidth>20000</ulChannelBandwidth>
+            <cellSubscriptionCapacity>100000</cellSubscriptionCapacity>
+            <cellDownlinkCaCapacity>200000</cellDownlinkCaCapacity>
+            <dlChannelBandwidth>20000</dlChannelBandwidth>
+            <caPrioThreshold>300</caPrioThreshold>
+            <estCellCapUsableFraction>100</estCellCapUsableFraction>
+            <lbTpNonQualFraction>35</lbTpNonQualFraction>
+            <lbTpRankThreshMin>-20</lbTpRankThreshMin>
+            <ulSCellPriority>5</ulSCellPriority>
+            <physicalLayerCellIdGroup>100</physicalLayerCellIdGroup>
+            <physicalLayerSubCellId>2</physicalLayerSubCellId>
+            <tac>1</tac>
+            <dlConfigurableFrequencyStart>25</dlConfigurableFrequencyStart>
+            <dlInterferenceManagementActive>true</dlInterferenceManagementActive>
+            <ulSrsEnable>true</ulSrsEnable>
+            <sectorCarrierRef>ManagedElement=1,ENodeBFunction=1,SectorCarrier=2</sectorCarrierRef>
+        </EUtranCellFDD>
+        <EUtranCellFDD operation="create">
+            <eUtranCellFDDId>myCell3</eUtranCellFDDId>
+            <ulChannelBandwidth>20000</ulChannelBandwidth>
+            <dlChannelBandwidth>20000</dlChannelBandwidth>
+            <cellId>3</cellId>
+            <earfcndl>1</earfcndl>
+            <earfcnul>18001</earfcnul>
+            <physicalLayerCellIdGroup>100</physicalLayerCellIdGroup>
+            <physicalLayerSubCellId>2</physicalLayerSubCellId>
+            <tac>1</tac>
+            <sectorCarrierRef>ManagedElement=1,ENodeBFunction=1,SectorCarrier=1</sectorCarrierRef>
+            <availabilityStatus>POWER_OFF</availabilityStatus>
+            <availabilityStatus>OFF_LINE</availabilityStatus>
+            <availabilityStatus>POWER_OFF</availabilityStatus>
+            <administrativeState>LOCKED</administrativeState>
+            <operationalState>ENABLED</operationalState>
+        </EUtranCellFDD>
+        <EUtranCellFDD operation="delete">
+            <eUtranCellFDDId>myCell10</eUtranCellFDDId>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

@@ -1,0 +1,42 @@
+version: "2.1"
+services:
+
+  netsim:
+    container_name: netsim
+    image: armdocker.rnd.ericsson.se/proj_oss_releases/enm/netsim_v2:17.16
+    environment:
+      - DISPLAY
+      - ENTRYPOINT_ARGS=--regExp LTE17 --all
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    networks:
+      mynet:
+        ipv4_address: 192.168.1.3
+
+  ${docker.image.name}:
+    container_name: ${docker.image.name}
+    image: ${docker.repo}/${docker.image.name}:${docker.tag}
+    logging:
+      options:
+        max-size: "50m"
+        max-file: "2"
+    environment:
+      - LISTENER=com.ericsson.ranexplorer.yangecimadapter.netconf.rpc.handler.config.listener.AdapterListener
+    ports:
+      - "2222:2222"
+    networks:
+      mynet:
+        ipv4_address: 192.168.1.2
+
+networks:
+  mynet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.1.0/16
+          gateway: 192.168.1.1
+

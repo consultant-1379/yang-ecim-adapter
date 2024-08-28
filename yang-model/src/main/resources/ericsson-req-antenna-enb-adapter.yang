@@ -1,0 +1,671 @@
+module "ericsson-req-antenna-enb-adapter" {
+    yang-version 1.1;
+    namespace "urn:rdns:com:ericsson:oammodel:ericsson-req-antenna-enb-adapter";
+    prefix reqantadpt;
+
+    import ericsson-yang-extensions { prefix "yexte"; }
+    import ericsson-req-equip-enb-adapter { prefix "reqeqadpt"; }
+
+    organization "Ericsson AB";
+    contact "Contact Ericsson first line support";
+    description "This module represents the eNodeB ReqAntennaSystem ECIM fragment to facilitate
+        a predev engagement with customer.
+
+        Copyright (c) 2018 Ericsson AB. All rights reserved.
+    ";
+
+    revision "2018-08-13" {
+        description "Initial version based on ECIM Lrat fragment (17A)
+                release=0 revision='' version=2";
+        yexte:version "1";
+        yexte:release "0";
+        yexte:correction "0";
+    }
+
+    typedef adm-state {
+        type enumeration {
+            enum locked {
+                value 0;
+                description "The resource is administratively prohibited from performing services
+                    for its users.";
+            }
+            enum unlocked {
+                value 1;
+                description "The resource is administratively permitted to perform services
+                    for its users.
+                    This is independent of its inherent operability.";
+            }
+            enum shuttingdown {
+                value 2;
+                description "Use of the resource is administratively permitted to existing instances
+                    of use only.
+                    While the system remains in the shutting down state the manager may at any time
+                    cause the managed object to revert to the locked state.";
+            }
+        }
+    }
+
+    typedef avail-status {
+        type enumeration {
+            enum in-test {
+                value 0;
+                description "The resource is undergoing a test procedure.
+                    If the administrative state is locked or shutting down, normal users are
+                    prevented from using the resource.";
+            }
+            enum failed {
+                value 1;
+                description "The resource has an internal fault that prevents it from operating.";
+            }
+            enum power-off {
+                value 2;
+                description "The resource requires power to be applied and is not powered on.";
+            }
+            enum off-line {
+                value 3;
+                description "The resource requires a routine operation to be performed.
+                    This routine operation is to place the resource online and make it available
+                    for use. The operation may be manual or automatic, or both. The operational
+                    state is disabled.";
+            }
+            enum off-duty {
+                value 4;
+                description "The resource has been made inactive by an internal control process.";
+            }
+            enum dependency {
+                value 5;
+                description "The resource cannot operate because some other resource on which it depends
+                    is unavailable.";
+            }
+            enum degraded {
+                value 6;
+                description "The service available from the resource is degraded in some respect.";
+            }
+            enum not-installed {
+                value 7;
+                description "The resource represented by the containing list entry or container is not 
+                    present, or is incomplete.";
+            }
+            enum log-full {
+                value 8;
+                description "Indicates a log full condition.
+                    The semantics are defined in CCITT Rec. X.735 | ISO/IEC 10164-6.";
+            }
+            enum dependency-locked {
+                value 9;
+                description "The administrative state of a resource that this resource depends on is locked
+                    or the availability status of the other resource is dependency locked.";
+            }
+            enum dependency-failed {
+                value 10;
+                description "The availability status of a resource that this resource depends
+                    on is failed or dependency failed.";
+            }
+            enum dependency-shuttingdown {
+                value 11;
+                description "The administrative state of a resource that this resource depends on is shutting down.
+                    or the availability status of the other resource is dependency shutting down.";
+            }
+        }
+    }
+
+    typedef oper-state {
+        type enumeration {
+            enum disabled {
+                value 0;
+                description "The resource is totally inoperable.";
+            }
+            enum enabled {
+                value 1;
+                description "The resource is partially or fully operable.";
+            }
+        }
+    }
+
+    typedef tcp-status {
+        type enumeration {
+            enum unknown {
+                value 0;
+            }
+            enum started {
+                value 1;
+            }
+            enum finished {
+                value 2;
+            }
+            enum failed {
+                value 3;
+            }
+        }
+    }
+    
+    augment "/reqeqadpt:equipment" {
+   
+        list antenna-unit-group {
+            key "id";
+            description "Each antenna-unit-group list entry contains references to the antenna
+                and antenna near products (RET/TMA) serving a sector";
+
+            leaf id {
+                type string;
+                description "A user friendly identifier for the antenna-unit-group.";
+            }
+
+            leaf position-information {
+                type string {
+                    length "0..255";
+                }
+                description "Information on where the antenna unit group is located. This can
+                    be expressed in terms of a street address, building, floor, room etc.";
+            }
+
+            list antenna-near-unit {
+                key "id";
+                max-elements 48;
+                description "Each antenna-near-unit list entry represents a hardware unit
+                    installed in the antenna system that can be controlled and supervised
+                    by the system";
+
+                leaf id {
+                    type string;
+                    description "A user friendly identifier for the antenna-near-unit.";
+                }
+
+                leaf-list availability-status {
+                    type avail-status;
+                    config false;
+                    description "The availability status. In contains details about
+                        ../operational-state.
+                        Specification: ITU-T Rec. X.731";
+                }
+
+                leaf hardware-version {
+                    type string {
+                        length "0..255";
+                    }
+                    config false;
+                    description "The hardware version of the antenna-near-unit.";
+                }
+
+                leaf iuant-device-type {
+                    type uint8 {
+                        range "1 | 2 | 17";
+                    }
+                    default 1;
+                    description "Type of IUANT-compliant antenna line device.
+                        Takes its value from section 4.7 of 3GPP TS 25.462 (after conversion
+                        from hex to decimal):
+
+                        - 1 indicates single-antenna Remote Electrical Tilt (RET) device
+                        - 2 indicates tower mounted amplifier
+                        - 17 indicates multi-antenna RET device
+
+                        NOTE: 3GPP TS 25.462 defines device types by providing hexadecimal
+                        codes. THe code must be converted to decimal in order to be used.
+                        If multi-antenna RET device is indicated as 0x11HEX in 3GPP TS 25.462,
+                        the decimal equivalent 17 must be used here.
+
+                        Takes effect: Next restart";
+                    yexte:takes-effect "Next restart";
+                }
+
+                leaf on-unit-unique-id {
+                    type string;
+                    config false;
+                    description "The unique ID reported by the physical antenna-near-unit.
+                        The first two characters of the ID are the vendor code.
+                        The value is extracted from the response message sent by the antenna
+                        near unit during connection establishment.";
+                }
+
+                leaf operational-state {
+                    type oper-state;
+                    config false;
+                    description "The operational state.
+                        Specification: ITU-T Rec. X.731";
+                }
+
+                leaf product-number {
+                    type string {
+                        length "0..255";
+                    }
+                    config false;
+                    description "Uniquely identifies the model of antenna-near-unit.";
+                }
+
+                leaf self-test-status {
+                    type tcp-status;
+                    config false;
+                    description "The status of ongoing self-test operation.
+                        In case on self-test has been performed since last Baseband restart it 
+                        shows state unknown.
+
+                        NOTE: The self-test-status is not used to verify or confirm if a self-test
+                        has been performed or not.";
+                }
+
+                leaf serial-number {
+                    type string {
+                        length "0..17";
+                    }
+                    config false;
+                    description "Unique number consisting of vendor code followed by a device 
+                        serial number";
+                }
+
+                leaf software-version {
+                    type string {
+                        length "0..255";
+                    }
+                    config false;
+                    description "The software version of the antenna-near-unit.";
+                }
+
+                leaf unique-id {
+                    type string {
+                        length "0..19";
+                    }
+                    description "Subset of the unique identifier of the antenna-near-unit.
+                        It is used to support advanced antenna system configurations, such as
+                        cascated RETs. Leave empty when the units are not cascaded.
+
+                        The value stated is a subset of the uniqueID (concatenation of the vendor
+                        code and the antenna-near-unit serial-number) which must contain enough
+                        significant characters/digits to be unique among the antenna near units
+                        (with iuant-device-type single antenna RET or multiple antenna RET) connected
+                        to the rf-port.
+                        See also 3GPP 25.462.
+
+                        Some vendors use specific modifications of the serial number on the device 
+                        label to defined the unique ID. Contact the vendor of the antenna-near-unit
+                        (RET) to obtain the mapping between the serial number taken from the label
+                        and the unique ID.";
+                }
+
+                leaf administrative-state {
+                    type adm-state;
+                    default "unlocked";
+                    description "The administrative state.
+                        If set to shuttingdown, the state will immediately be brought to locked.
+                        Specification: ITU-T Rec. X.731";
+                }
+
+                list ret-sub-unit {
+                    key "id";
+                    max-elements 8;
+                    description "Each list entry represents a device, either a single RET subunit
+                        or a subunit of the multi RET subunit providing for remote electrical
+                        tilting of the antenna unit where it is mounted.";
+
+                    leaf id {
+                        type string;
+                        description "A user friendly identifier for the ret-sub-unit.";
+                    }
+
+                    leaf-list availability-status {
+                        type avail-status;
+                        config false;
+                        description "The availability status. In contains details about
+                            ../operational-state.
+                            Specification: ITU-T Rec. X.731";
+                    }
+
+                    leaf calibration-status {
+                        type tcp-status;
+                        config false;
+                        description "The status of ongoing calibration.
+                            In case no calibration has been performed since last Baseband restart
+                            it shows state unknown.
+
+                            NOTE: The calibration-status is not used to verify or confirm if the RET
+                            subunit is calibrated or not. The RET subunit is calibrated unless an
+                            alarm indicates otherwise";
+                    }
+
+                    leaf electrical-antenna-tilt {
+                        type int16 {
+                            range "-999 | -900..900";
+                        }
+                        units "0.1 degrees";
+                        default 0;
+                        description "The electrically-controlled tilt of the maximum of the antenna
+                            main beam with respect to the direction orthogonal to the antenna element
+                            axis, see 3GPP TS 25.466. It is a signed value. Positive value indicates
+                            downtilt, and negative value indicates uptilt. Value -999 is used to
+                            overwrite the electrical-antenna-tilt value with the actual tilt value in
+                            the RETU. -999 can be set during site configuration to reuse the existing
+                            antenna tilt settings.
+
+                            Dependencies: 
+                            ret-sub-unit.min-tilt =< ret-sub-unit.electrical-antenna-tilt <= ret-sub-unit.max-tilt
+
+                            Throws: AttributeValueOutOfRangeException #Test
+
+                            Disturbances: Change can affect traffic while the antenna beam is moving.";
+                        yexte:dependencies "ret-sub-unit.min-tilt =< ret-sub-unit.electrical-antenna-tilt <= ret-sub-unit.max-tilt";
+                        yexte:disturbances "Change can affect traffic while the antenna beam is moving.";
+                    }
+
+                    leaf iuant-antenna-bearing {
+                        type int16 {
+                            range "-1000 | 0..3599";
+                        }
+                        units "0.1 degrees";
+                        default -1000;
+                        description "Antenna bearing on the antenna subunit where the RET subunit is
+                            installed.
+                            Antenna bearing is expressed as bearing value x 10.
+                            This leaf is part of the IUANT protocol definition (see 3GPP TS 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf iuant-antenna-model-number {
+                        type string {
+                            length "0..15";
+                        }
+                        description "Vendor-specific antenna model identifier.
+                            This leaf is part of IUANT protocol specification (see 3GPP 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf iuant-antenna-operating-band {
+                        type int64;
+                        default -1000;
+                        description "Operating band used by the antenna subunit connected to the RET
+                            subunit.
+                            This leaf is part of IUANT protocol specification (see 3GPP 25.466)
+                            and has no operational impact.
+                            Bit 0 in 0x03 is the least significant bit (For details on coding, see
+                            table B.2 of Annex B on 3GPP TS 25.466.";
+                    }
+
+                    leaf iuant-antenna-serial-number {
+                        type string {
+                            length "0..17";
+                        }
+                        description "Unique hardware identifier of the antenna where the RET subunit
+                            operates.
+                            This leaf is part of IUANT protocol specification (see 3GPP 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf iuant-base-station-id {
+                        type string {
+                            length "0..32";
+                        }
+                        description "Base station ID.
+                            This leaf is part of IUANT protocol specification (see 3GPP 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf iuant-installation-date {
+                        type string {
+                            length "0..6";
+                        }
+                        description "Installation date.
+                            This leaf is part of IUANT protocol specification (see 3GPP 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf iuant-installers-id {
+                        type string {
+                            length "0..5";
+                        }
+                        description "ID of the responsible installer.
+                            This leaf is part of IUANT protocol specification (see 3GPP 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf iuant-sector-id {
+                        type string {
+                            length "0..32";
+                        }
+                        description "RBS internal sector ID.
+                            This leaf is part of IUANT protocol specification (see 3GPP 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf max-tilt {
+                        type int16 {
+                            range "-1000 | -900..900";
+                        }
+                        units "0.1 degrees";
+                        default -1000;
+                        description "Maximum electrical tilt supported by the RET subunit.
+                            The electrical tilt is defined as the inclination of the maximum of the
+                            antenna main beam with respect to the direction orthogonal to the antenna
+                            element axis. It is a signed value. Positive value indicates downtilt,
+                            and negative value indicates uptilt.
+
+                            This leaf is part of the IUANT protocol definition (see 3GPP TS 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf min-tilt {
+                        type int16 {
+                            range "-1000 | -900..900";
+                        }
+                        units "0.1 degrees";
+                        default -1000;
+                        description "Minimum electrical tilt supported by the RET subunit.
+                            The electrical tilt is defined as the inclination of the maximum of the
+                            antenna main beam with respect to the direction orthogonal to the antenna
+                            element axis. It is a signed value. Positive value indicates downtilt,
+                            and negative value indicates uptilt.
+
+                            This leaf is part of the IUANT protocol definition (see 3GPP TS 25.466)
+                            and has no operational impact.";
+                    }
+
+                    leaf operational-state {
+                        type oper-state;
+                        config false;
+                        description "The operational state.
+                            Specification: ITU-T Rec. X.731";
+                    }
+
+                    leaf subunit-number {
+                        type int32;
+                        config false;
+                        description "Subunit identifier carried on L7 messages in which the subunits
+                            are pointed with the help of application level identifiers.";
+                    }
+
+                    list iuant-antenna-operating-gain {
+                        key "index";
+                        max-elements 4;
+
+                        leaf index {
+                            type uint8 {
+                                range "0..3";
+                            }
+                        }
+
+                        leaf value {
+                            type int16 {
+                                range "-1000 | 0..255";
+                            }
+                            mandatory true;
+                            units "0.1 dBi";
+                            description "Antenna gain for each of four operating bands, starting with the 
+                                lowest value.
+                                This leaf is part of the IUANT protocol definition (see 3GPP TS 25.466)
+                                and has no operational impact.";
+                        }
+                    }
+                }
+            }
+
+            list rf-branch {
+                key "id";
+                max-elements 24;
+                description "Each rf-branch list entry represents the connection from an antenna feeder port
+                    on the RU to one antenna feeder connector on one or several antenna units.
+                    Each rf-branch list entry represents all equipment between the radio and the antenna which
+                    isn't modelled by any other list. That includes feeder, filters and non-supervised, non-
+                    controlled TMA";
+
+                leaf id {
+                    type string;
+                    description "A user friendly identifier for the rf-branch.";
+                }
+
+                list dl-attenuation {
+                    key "index";
+                    min-elements 1;
+                    max-elements 40;
+
+                    leaf index {
+                        type uint8 {
+                            range "0..39";
+                        }
+                    }
+
+                    leaf value {
+                        type int32 {
+                            range "-500..500 | 65535";
+                        }
+                        mandatory true;
+                        units "0.1 dB";
+                        description "Downlink attenuation between the connector on the Radio and the connector on
+                            the antenna unit.
+                            The attenuation includes feeder, filters, and non-supervised, uncontrolled Tower Mounted 
+                            Amplifiers (TMAs).
+                            The sequence contains 40 entries and each entry represents one 5-MHz interval.
+                            The first entry represents the attenuation value of the lowest frequency interval in the 
+                            operating band, and so on.
+                            The number of intervals depends on the operating band.
+                            For information on different operating bands, refer to 3GPP TS 36.104.
+                            The value range for each entry is -500 to -2, -1, 0-500 (-50 to 50 dB). Unused entries 
+                            are set to -1. 
+                            NOTE: Each entry correspond to one 20-MHz interval for band 46 (5 GHz) radio.
+
+                            Disturbances: Changing this leaf can affect traffic.
+                            Takes effect: If cell is locked, takes effect when cell is unlocked. If cell is unlocked,
+                            takes effect immediately.";
+                        yexte:disturbances "Changing this leaf can affect traffic";
+                        yexte:takes-effect "If cell is locked, takes effect when cell is unlocked. If cell is unlocked,
+                            takes effect immediately.";
+                    }
+                }
+
+                list dl-traffic-delay {
+                    key "index";
+                    max-elements 40;
+
+                    leaf index {
+                        type uint8 {
+                            range "0..39";
+                        }
+                    }
+
+                    leaf value {
+                        type int32 {
+                            range "-1..800000";
+                        }
+                        mandatory true;
+                        units "1 ns";
+                        description "Downlink traffic delay between the connector on the Radio and the connector on 
+                            the antenna unit.
+                            The delay includes feeder, filter, and non-supervised, uncontrolled Tower Mounted 
+                            Amplifiers (TMAs).
+                            The sequence contains 40 entries and each entry represents one 5-MHz interval. The first 
+                            entry represents the attenuation value of the lowest frequency interval in the operating
+                            band, and so on.
+                            The number of intervals used depends on the operating band.
+                            For information on the different operating bands, refer to 3GPP TS 36.104.
+                            The value range for each entry is 0-800000 (0-800000 ns). Unused entries are set to -1.
+                            NOTE: The range supported by the actual Radio Unit may be smaller and must be considered
+                            when configuring the antenna system. 
+                            NOTE: Each entry correspond to one 20-MHz interval for band 46 (5 GHz) radio.
+
+                            Disturbances: Changing this leaf can affect traffic.
+                            Takes effect: If cell is locked, takes effect when cell is unlocked. If cell is unlocked,
+                            takes effect immediately.";
+                        yexte:disturbances "Changing this leaf can affect traffic";
+                        yexte:takes-effect "If cell is locked, takes effect when cell is unlocked. If cell is unlocked,
+                            takes effect immediately.";
+                    }
+                }
+
+                list ul-attenuation {
+                    key "index";
+                    min-elements 1;
+                    max-elements 40;
+
+                    leaf index {
+                        type uint8 {
+                            range "0..39";
+                        }
+                    }
+
+                    leaf value {
+                        type int16 {
+                            range "-500..500";
+                        }
+                        mandatory true;
+                        units "0.1 dB";
+                        description "Uplink attenuation between the connector on the Radio and the connector on
+                            the antenna unit.
+                            The attenuation includes feeder, filters, and non-supervised, uncontrolled Tower Mounted 
+                            Amplifiers (TMAs).
+                            The sequence contains 40 entries and each entry represents one 5-MHz interval.
+                            The first entry represents the attenuation value of the lowest frequency interval in the 
+                            operating band, and so on.
+                            The number of intervals depends on the operating band.
+                            For information on different operating bands, refer to 3GPP TS 36.104.
+                            The value range for each entry is -500 to -2, -1, 0-500 (-50 to 50 dB). Unused entries 
+                            are set to -1. 
+                            NOTE: Each entry correspond to one 20-MHz interval for band 46 (5 GHz) radio.
+
+                            Disturbances: Changing this leaf can affect traffic.
+                            Takes effect: If cell is locked, takes effect when cell is unlocked. If cell is unlocked,
+                            takes effect immediately.";
+                        yexte:disturbances "Changing this leaf can affect traffic";
+                        yexte:takes-effect "If cell is locked, takes effect when cell is unlocked. If cell is unlocked,
+                            takes effect immediately.";
+                    }
+                }
+
+                list ul-traffic-delay {
+                    key "index";
+                    max-elements 40;
+
+                    leaf index {
+                        type uint8 {
+                            range "0..39";
+                        }
+                    }
+
+                    leaf value {
+                        type int32 {
+                            range "-1..800000";
+                        }
+                        mandatory true;
+                        units "1 ns";
+                        description "Downlink traffic delay between the connector on the Radio and the connector on 
+                            the antenna unit.
+                            The delay includes feeder, filter, and non-supervised, uncontrolled Tower Mounted 
+                            Amplifiers (TMAs).
+                            The sequence contains 40 entries and each entry represents one 5-MHz interval. The first 
+                            entry represents the attenuation value of the lowest frequency interval in the operating
+                            band, and so on.
+                            The number of intervals used depends on the operating band.
+                            For information on the different operating bands, refer to 3GPP TS 36.104.
+                            The value range for each entry is 0-800000 (0-800000 ns). Unused entries are set to -1.
+                            NOTE: The range supported by the actual Radio Unit may be smaller and must be considered
+                            when configuring the antenna system. 
+                            NOTE: Each entry correspond to one 20-MHz interval for band 46 (5 GHz) radio.
+
+                            Disturbances: Changing this leaf can affect traffic.
+                            Takes effect: If cell is locked, takes effect when cell is unlocked. If cell is unlocked,
+                            takes effect immediately.";
+                        yexte:disturbances "Changing this leaf can affect traffic";
+                        yexte:takes-effect "If cell is locked, takes effect when cell is unlocked. If cell is unlocked,
+                            takes effect immediately.";
+                    }
+                }
+            }
+        }
+    }
+}

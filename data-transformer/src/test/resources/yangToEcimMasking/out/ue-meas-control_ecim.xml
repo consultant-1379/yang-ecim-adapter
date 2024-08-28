@@ -1,0 +1,16 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <EUtranCellFDD>
+            <UeMeasControl>
+                <sMeasure/>
+                <ReportConfigEUtraInterFreqLb>
+                    <a5Threshold1Rsrp/>
+                    <a5Threshold2Rsrp/>
+                    <a5Threshold2Rsrq/>
+                    <hysteresisA5/>
+                </ReportConfigEUtraInterFreqLb>
+            </UeMeasControl>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

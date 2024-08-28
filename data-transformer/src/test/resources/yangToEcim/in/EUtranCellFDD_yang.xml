@@ -1,0 +1,60 @@
+<enodeb-function>
+  <eutran-cell-fdd>
+    <id>myCell1</id>
+    <ul-channel-bandwidth>20000</ul-channel-bandwidth>
+    <cell-subscription-capacity>100000</cell-subscription-capacity>
+    <cell-downlink-ca-capacity>200000</cell-downlink-ca-capacity>
+    <dl-channel-bandwidth>20000</dl-channel-bandwidth>
+    <ca-prio-threshold>300</ca-prio-threshold>
+    <est-cell-cap-usable-fraction>100</est-cell-cap-usable-fraction>
+    <lb-tp-non-qual-fraction>35</lb-tp-non-qual-fraction>
+    <lb-tp-rank-thresh-min>-20</lb-tp-rank-thresh-min>
+    <ul-s-cell-priority>5</ul-s-cell-priority>
+    <physical-layer-cell-id-group>100</physical-layer-cell-id-group>
+    <physical-layer-sub-cell-id>2</physical-layer-sub-cell-id>
+    <tac>1</tac>
+    <dl-configurable-frequency-start>0</dl-configurable-frequency-start>
+    <dl-interference-management-active>false</dl-interference-management-active>
+    <ul-srs-enable>false</ul-srs-enable>
+    <sector-carrier-ref>1</sector-carrier-ref>
+  </eutran-cell-fdd>
+  <eutran-cell-fdd operation="merge">
+    <id>myCell2</id>
+    <ul-channel-bandwidth>20000</ul-channel-bandwidth>
+    <cell-subscription-capacity>100000</cell-subscription-capacity>
+    <cell-downlink-ca-capacity>200000</cell-downlink-ca-capacity>
+    <dl-channel-bandwidth>20000</dl-channel-bandwidth>
+    <ca-prio-threshold>300</ca-prio-threshold>
+    <est-cell-cap-usable-fraction>100</est-cell-cap-usable-fraction>
+    <lb-tp-non-qual-fraction>35</lb-tp-non-qual-fraction>
+    <lb-tp-rank-thresh-min>-20</lb-tp-rank-thresh-min>
+    <ul-s-cell-priority>5</ul-s-cell-priority>
+    <physical-layer-cell-id-group>100</physical-layer-cell-id-group>
+    <physical-layer-sub-cell-id>2</physical-layer-sub-cell-id>
+    <tac>1</tac>
+    <dl-configurable-frequency-start>25</dl-configurable-frequency-start>
+    <dl-interference-management-active>true</dl-interference-management-active>
+    <ul-srs-enable>true</ul-srs-enable>
+    <sector-carrier-ref>2</sector-carrier-ref>
+  </eutran-cell-fdd>
+  <eutran-cell-fdd operation="create">
+    <id>myCell3</id>
+    <ul-channel-bandwidth>20000</ul-channel-bandwidth>
+    <dl-channel-bandwidth>20000</dl-channel-bandwidth>
+    <cell-id>3</cell-id>
+    <earfcndl>1</earfcndl>
+    <earfcnul>18001</earfcnul>
+    <physical-layer-cell-id-group>100</physical-layer-cell-id-group>
+    <physical-layer-sub-cell-id>2</physical-layer-sub-cell-id>
+    <tac>1</tac>
+    <sector-carrier-ref>1</sector-carrier-ref>
+    <availability-status>power-off</availability-status>
+    <availability-status>off-line</availability-status>
+    <availability-status>power-off</availability-status>
+    <administrative-state>locked</administrative-state>
+    <operational-state>enabled</operational-state>
+  </eutran-cell-fdd>
+  <eutran-cell-fdd operation="delete">
+    <id>myCell10</id>
+  </eutran-cell-fdd>
+</enodeb-function>

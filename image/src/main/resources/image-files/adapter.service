@@ -1,0 +1,11 @@
+[Unit]
+Description=Adapter service
+
+[Service]
+User=ericsson
+Group=ericsson
+ExecStart=/opt/ericsson/adapter/bin/run.sh
+EnvironmentFile=/opt/ericsson/adapter/conf/init_params
+
+[Install]
+WantedBy=multi-user.target

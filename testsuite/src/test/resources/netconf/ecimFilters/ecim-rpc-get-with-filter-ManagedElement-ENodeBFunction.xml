@@ -1,0 +1,9 @@
+<get>
+  <filter type="subtree">
+    <ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+      <managedElementId>LTE01dg2ERBS00001</managedElementId>
+      <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+      </ENodeBFunction>
+    </ManagedElement>
+  </filter>
+</get>

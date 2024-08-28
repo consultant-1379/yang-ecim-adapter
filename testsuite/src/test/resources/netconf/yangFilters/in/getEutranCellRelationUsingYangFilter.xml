@@ -1,0 +1,20 @@
+<rpc message-id="1" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <get-config>
+        <source>
+            <running/>
+        </source>
+        <filter type="subtree">
+            <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+                <eutran-cell-fdd>
+                    <id>%s</id>
+                    <eutran-freq-relation>
+                        <id>%s</id>
+                        <eutran-cell-relation>
+                            <id>%s</id>
+                        </eutran-cell-relation>
+                    </eutran-freq-relation>
+                </eutran-cell-fdd>
+            </enodeb-function>
+        </filter>
+    </get-config>
+</rpc>

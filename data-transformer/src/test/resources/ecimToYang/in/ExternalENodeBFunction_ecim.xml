@@ -1,0 +1,42 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>LTE01dg2ERBS00001</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtraNetwork>
+            <eUtraNetworkId>1</eUtraNetworkId>
+            <ExternalENodeBFunction>
+                <externalENodeBFunctionId>1</externalENodeBFunctionId>
+                <eNBId>11</eNBId>
+                <eSCellCapacityScaling>1000</eSCellCapacityScaling>
+                <eNodeBPlmnId struct="PlmnIdentity">
+                    <mcc>111</mcc>
+                    <mnc>02</mnc>
+                    <mncLength>2</mncLength>
+                </eNodeBPlmnId>
+            </ExternalENodeBFunction>
+            <ExternalENodeBFunction unexpectedAttr="value1">
+                <eNBId>22</eNBId>
+                <eSCellCapacityScaling>2000</eSCellCapacityScaling>
+                <eNodeBPlmnId struct="PlmnIdentity">
+                    <mcc>222</mcc>
+                    <mnc>02</mnc>
+                    <mncLength>2</mncLength>
+                </eNodeBPlmnId>
+                <externalENodeBFunctionId>2</externalENodeBFunctionId>
+            </ExternalENodeBFunction>
+            <ExternalENodeBFunction unexpectedAttr="value2">
+                <eNBId>33</eNBId>
+                <eSCellCapacityScaling>3000</eSCellCapacityScaling>
+                <externalENodeBFunctionId>3</externalENodeBFunctionId>
+                <eNodeBPlmnId struct="PlmnIdentity">
+                    <mcc>333</mcc>
+                    <mnc>03</mnc>
+                    <mncLength>2</mncLength>
+                </eNodeBPlmnId>
+            </ExternalENodeBFunction>
+            <ExternalENodeBFunction unexpectedAttr="value3">
+                <externalENodeBFunctionId>10</externalENodeBFunctionId>
+            </ExternalENodeBFunction>
+        </EUtraNetwork>
+    </ENodeBFunction>
+</ManagedElement>

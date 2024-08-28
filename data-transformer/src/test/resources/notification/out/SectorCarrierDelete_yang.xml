@@ -1,0 +1,13 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-07-19T17:10:59+00:00</eventTime>
+  <netconf-config-change xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-notifications">
+    <changed-by>
+      <server/>
+    </changed-by>
+    <datastore>running</datastore>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:sector-carrier[lrtadpt:id='16']</target>
+      <operation>delete</operation>
+    </edit>
+  </netconf-config-change>
+</notification>

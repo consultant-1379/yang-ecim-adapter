@@ -1,0 +1,9 @@
+<enodeb-function>
+    <enb-id>TestDefaultFilter</enb-id>
+    <operationalAttribute config="false"/>
+    <qci-table>
+        <qci-profile-predefined>
+            <qci config="false"/>
+        </qci-profile-predefined>
+    </qci-table>
+</enodeb-function>

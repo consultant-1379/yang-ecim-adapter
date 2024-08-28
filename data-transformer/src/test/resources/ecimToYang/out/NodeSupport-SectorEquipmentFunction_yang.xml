@@ -1,0 +1,14 @@
+<node-support xmlns="urn:rdns:com:ericsson:oammodel:ericsson-rme-sef-enb-adapter">
+   <sector-equipment-function>
+      <id>1</id>
+      <administrative-state>unlocked</administrative-state>
+      <mixed-mode-radio>false</mixed-mode-radio>
+      <operational-state>disabled</operational-state>
+      <eutran-fq-bands>50</eutran-fq-bands>
+      <eutran-fq-bands>80</eutran-fq-bands>
+      <eutran-fq-bands>150</eutran-fq-bands>
+      <utran-fdd-fq-bands>Band II: full on all</utran-fdd-fq-bands>
+      <available-hw-output-power>0</available-hw-output-power>
+      <availability-status>failed</availability-status>
+   </sector-equipment-function>
+</node-support>

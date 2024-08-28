@@ -1,0 +1,197 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+<eventTime>2018-08-15T08:54:52+00:00</eventTime>
+<events dnPrefix="" xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <objectCreated dn="ManagedElement=1,Equipment=1,AntennaUnitGroup=3,RfBranch=3">
+        <attr name="auPortRef"/>
+        <attr name="dlAttenuation">
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+        </attr>
+        <attr name="dlTrafficDelay">
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+        </attr>
+        <attr name="reservedBy"/>
+        <attr name="rfPortRef"/>
+        <attr name="tmaRef"/>
+        <attr name="ulAttenuation">
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+        </attr>
+        <attr name="userLabel"/>
+        <attr name="ulTrafficDelay">
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+            <v>-1</v>
+        </attr>
+        <attr name="dlAttenuationPerFqRange">
+            <v>-1</v>
+            <v>-1</v>
+        </attr>
+        <attr name="dlTrafficDelayPerFqRange">
+            <v>-1</v>
+            <v>-1</v>
+        </attr>
+        <attr name="ulAttenuationPerFqRange">
+            <v>-1</v>
+            <v>-1</v>
+        </attr>
+        <attr name="ulTrafficDelayPerFqRange">
+            <v>-1</v>
+            <v>-1</v>
+        </attr>
+    </objectCreated>
+</events>
+</notification>
+

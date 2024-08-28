@@ -1,0 +1,134 @@
+heat_template_version: 2016-04-08
+
+description: Template to deploy cm-adapter
+
+parameters:
+  vm_name:
+    type: string
+    label: Name of the adapter VM
+    description: Name of the adapter VM
+  adapter_key:
+    type: string
+    label: Key Name
+    description: Name of key-pair to be used for adapter VM
+  image_name:
+    type: string
+    label: Image Name
+    description: Image to be used for adapter VM
+  flavor_name:
+    type: string
+    label: Instance Type
+    description: Type of instance (flavor) to be used
+  adapter_netconf_port:
+    type: number
+    label: Adapter Netconf Port
+    description: Netconf port of the adapter
+    default: 830
+  eNodeB_ip_address:
+    type: string
+    label: eNodeB IP Address
+    description: IP address of the eNodeB that adapter communicates with
+  eNodeB_netconf_port:
+    type: number
+    label: eNodeB netconf Port
+    description: Netconf Port on the eNodeB that adapter communicates with
+  username:
+    type: string
+    label: SSH username
+    description: Username to use for SSH connection to the adapter. This must match the username used to connect to the eNodeB.
+  password:
+    type: string
+    label: SSH user password
+    description: Password to use for SSH connection to the adapter. This must match the password used to connect to the eNodeB.
+  idle_timeout:
+    type: number
+    label: Idle Timeout
+    description: (milliseconds) The time session stays open, while no activity going on, after which the adapter will close the SSH connection used for netconf.
+    default: 600000
+  disconnect_timeout:
+    type: number
+    label: Disconnect Timeout
+    description: (milliseconds) This is used when a disconnection is attempted.  If the response disconnect message from the adapter to the adapter client, eg. ONAP, has not been sent before the timeout, the underlying socket will be forcibly closed. This will happen if something goes wrong with the normal disconnection procedure, eg. eNodeB doesn't respond to disconnect request in time.
+    default: 10000
+  vnf_id:
+    type: string
+    label: VNF ID
+    description: The VNF ID of the adapter. This is provided by ONAP.
+  vf_module_id:
+    type: string
+    label: Virtual Function Module ID
+    description: The Virtual Function Module ID of the adapter. This is provided by ONAP.
+  northbound_network_name:
+    type: string
+    label: Northbound network name
+    description: Adapter will communicate with ONAP over this network
+  southbound_network_name:
+    type: string
+    label: Southbound network name
+    description: Adapter will communicate with eNodeB over this network
+  adapter_northbound_ip_address:
+    type: string
+    label: Adapter northbound IP Address
+    description: IP address in northbound network assigned to the network interface on the adapter machine for northbound communication. Adapter will listen on this IP address for incoming Netconf connections and ONAP will connect to adapter on this IP address.
+  adapter_southbound_ip_address:
+    type: string
+    label: Adapter southbound IP Address
+    description: IP address in southbound network assigned to the network interface on the adapter machine for southbound communication. Adapter will use this IP address for outgoing Netconf connections to the eNodeB.
+
+
+resources:
+
+  adapter_0_port_0:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: northbound_network_name }
+      fixed_ips:
+       - ip_address: { get_param: adapter_northbound_ip_address }
+
+  adapter_0_port_1:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: southbound_network_name }
+      fixed_ips:
+       - ip_address: { get_param: adapter_southbound_ip_address }
+
+  adapter_0:
+    type: OS::Nova::Server
+    properties:
+      key_name: { get_param: adapter_key }
+      image: { get_param: image_name }
+      flavor: { get_param: flavor_name }
+      name: { get_param: vm_name }
+      metadata: {vnf_id: { get_param: vnf_id }, vf_module_id: { get_param: vf_module_id }}
+      networks:
+      - port: { get_resource: adapter_0_port_0 }
+      - port: { get_resource: adapter_0_port_1 }
+      user_data_format: RAW
+      user_data:
+        str_replace:
+          params:
+            __adapter_netconf_port__: { get_param: adapter_netconf_port }
+            __eNodeB_ip_address__: { get_param: eNodeB_ip_address }
+            __eNodeB_netconf_port__: { get_param: eNodeB_netconf_port }
+            __adapter_username__: { get_param: username }
+            __password__: { get_param: password }
+            __idle_timeout__: { get_param: idle_timeout }
+            __disconnect_timeout__: { get_param: disconnect_timeout }
+            __adapter_northbound_ip_address__: { get_param: adapter_northbound_ip_address }
+            __adapter_southbound_ip_address__: { get_param: adapter_southbound_ip_address }
+
+          template: |
+            #!/bin/bash
+            echo "PORT=__adapter_netconf_port__" >> /tmp/init_params
+            echo "NODE=__eNodeB_ip_address__" >> /tmp/init_params
+            echo "NODE_PORT=__eNodeB_netconf_port__" >> /tmp/init_params
+            echo "ADAPTER_USERNAME=__adapter_username__" >> /tmp/init_params
+            echo "PASSWORD=__password__" >> /tmp/init_params
+            echo "IDLE_TIMEOUT=__idle_timeout__" >> /tmp/init_params
+            echo "DISCONNECT_TIMEOUT=__disconnect_timeout__" >> /tmp/init_params
+            echo "ADAPTER_NORTHBOUND_IP_ADDRESS=__adapter_northbound_ip_address__" >> /tmp/init_params
+            echo "ADAPTER_SOUTHBOUND_IP_ADDRESS=__adapter_southbound_ip_address__" >> /tmp/init_params
+
+            cp /tmp/init_params /opt/ericsson/adapter/conf/init_params
+            systemctl restart adapter
+

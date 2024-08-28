@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <AVC dn="ManagedElement=1,ENodeBFunction=1,QciTable=default,QciProfileOperatorDefined=myQci10">
+      <attr name="qciSubscriptionQuanta">
+        <v>110</v>
+      </attr>
+      <attr name="dscp">
+        <v>0</v>
+      </attr>
+      <attr name="logicalChannelGroupRef">
+        <v>ManagedElement=1,ENodeBFunction=1,QciTable=default,LogicalChannelGroup=0</v>
+      </attr>
+      <attr name="priority">
+        <v>1</v>
+      </attr>
+      <attr name="resourceType">
+        <v>NON_GBR</v>
+      </attr>
+      <attr name="schedulingAlgorithm">
+        <v>RESOURCE_FAIR</v>
+      </attr>
+      <attr name="absPrioOverride">
+        <v>NO_OVERRIDE</v>
+      </attr>
+      <attr name="dlMaxWaitingTime">
+        <v>0</v>
+      </attr>
+      <attr name="dlMinBitRate">
+        <v>0</v>
+      </attr>
+      <attr name="dlResourceAllocationStrategy">
+        <v>RESOURCE_FAIR</v>
+      </attr>
+      <attr name="pdb">
+        <v>80</v>
+      </attr>
+      <attr name="relativePriority">
+        <v>1</v>
+      </attr>
+      <attr name="resourceAllocationStrategy">
+        <v>RESOURCE_FAIR</v>
+      </attr>
+      <attr name="serviceType">
+        <v>UNDEFINED</v>
+      </attr>
+      <attr name="srsAllocationStrategy">
+        <v>DEACTIVATED</v>
+      </attr>
+      <attr name="ulMaxWaitingTime">
+        <v>0</v>
+      </attr>
+      <attr name="ulMinBitRate">
+        <v>0</v>
+      </attr>
+    </AVC>
+    <objectCreated dn="ManagedElement=1,ENodeBFunction=1,QciTable=default,QciProfileOperatorDefined=myQci11">
+      <attr name="qciSubscriptionQuanta">
+        <v>110</v>
+      </attr>
+      <attr name="dscp">
+        <v>0</v>
+      </attr>
+      <attr name="logicalChannelGroupRef">
+        <v>ManagedElement=1,ENodeBFunction=1,QciTable=default,LogicalChannelGroup=0</v>
+      </attr>
+      <attr name="priority">
+        <v>1</v>
+      </attr>
+      <attr name="resourceType">
+        <v>NON_GBR</v>
+      </attr>
+      <attr name="schedulingAlgorithm">
+        <v>RESOURCE_FAIR</v>
+      </attr>
+      <attr name="absPrioOverride">
+        <v>NO_OVERRIDE</v>
+      </attr>
+      <attr name="dlMaxWaitingTime">
+        <v>0</v>
+      </attr>
+      <attr name="dlMinBitRate">
+        <v>0</v>
+      </attr>
+      <attr name="dlResourceAllocationStrategy">
+        <v>RESOURCE_FAIR</v>
+      </attr>
+      <attr name="pdb">
+        <v>80</v>
+      </attr>
+      <attr name="relativePriority">
+        <v>1</v>
+      </attr>
+      <attr name="resourceAllocationStrategy">
+        <v>RESOURCE_FAIR</v>
+      </attr>
+      <attr name="serviceType">
+        <v>UNDEFINED</v>
+      </attr>
+      <attr name="srsAllocationStrategy">
+        <v>DEACTIVATED</v>
+      </attr>
+      <attr name="ulMaxWaitingTime">
+        <v>0</v>
+      </attr>
+      <attr name="ulMinBitRate">
+        <v>0</v>
+      </attr>
+    </objectCreated>
+    <objectDeleted dn="ManagedElement=1,ENodeBFunction=1,QciTable=default,QciProfileOperatorDefined=myQci12">
+    </objectDeleted>
+  </events>
+</notification>

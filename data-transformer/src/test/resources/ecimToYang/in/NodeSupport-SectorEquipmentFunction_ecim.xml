@@ -1,0 +1,27 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <NodeSupport xmlns="urn:com:ericsson:ecim:RmeSupport">
+        <nodeSupportId>1</nodeSupportId>
+        <release>R2A112</release>
+        <supportFunction>true</supportFunction>
+        <userLabel>my node support</userLabel>
+        <SectorEquipmentFunction xmlns="urn:com:ericsson:ecim:RmeSectorEquipmentFunction">
+           <sectorEquipmentFunctionId>1</sectorEquipmentFunctionId>
+           <administrativeState>UNLOCKED</administrativeState>
+           <availabilityStatus>FAILED</availabilityStatus>
+           <configuredOutputPower>20000</configuredOutputPower>
+           <fqBand>0</fqBand>
+           <mixedModeRadio>false</mixedModeRadio>
+           <operationalState>DISABLED</operationalState>
+           <reservedBy>ManagedElement=1,ENodeBFunction=1,SectorCarrier=1</reservedBy>
+           <availableSectorPower>0</availableSectorPower>
+           <noiseFigure>150</noiseFigure>
+           <userLabel>Bob</userLabel>
+           <eUtranFqBands>50</eUtranFqBands>
+           <eUtranFqBands>80</eUtranFqBands>
+           <eUtranFqBands>150</eUtranFqBands>
+           <utranFddFqBands>Band II: full on all</utranFddFqBands>
+           <availableHwOutputPower>0</availableHwOutputPower>
+        </SectorEquipmentFunction>
+    </NodeSupport>
+</ManagedElement>

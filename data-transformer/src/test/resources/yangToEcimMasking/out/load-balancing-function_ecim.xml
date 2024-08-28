@@ -1,0 +1,14 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <LoadBalancingFunction>
+            <lbThreshold/>
+            <lbCeiling/>
+            <lbRateOffsetCoefficient/>
+            <lbRateOffsetLoadThreshold/>
+            <lbCaThreshold/>
+            <lbDiffCaOffset/>
+            <lbCaCapHysteresis/>
+        </LoadBalancingFunction>
+    </ENodeBFunction>
+</ManagedElement>

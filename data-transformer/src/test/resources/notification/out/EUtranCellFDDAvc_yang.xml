@@ -1,0 +1,69 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <netconf-config-change xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-notifications">
+    <changed-by>
+      <server/>
+    </changed-by>
+    <datastore>running</datastore>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:ul-channel-bandwidth</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:cell-subscription-capacity</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:cell-downlink-ca-capacity</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:dl-channel-bandwidth</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:ca-prio-threshold</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:est-cell-cap-usable-fraction</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:lb-tp-non-qual-fraction</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:lb-tp-rank-thresh-min</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:ul-s-cell-priority</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:physical-layer-cell-id-group</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:physical-layer-sub-cell-id</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:tac</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:dl-configurable-frequency-start</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:dl-interference-management-active</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:ul-srs-enable</target>
+      <operation>merge</operation>
+    </edit>
+  </netconf-config-change>
+</notification>

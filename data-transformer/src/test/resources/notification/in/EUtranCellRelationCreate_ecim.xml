@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <objectCreated dn="ManagedElement=1,ENodeBFunction=1,EUtranCellFDD=myCell1,EUtranFreqRelation=myFreqRelation1,EUtranCellRelation=myCellRelation1-1">
+      <attr name="coverageIndicator">
+        <v>OVERLAP</v>
+      </attr>
+      <attr name="neighborCellRef">
+        <v>ManagedElement=LTE01dg2ERBS00001,ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=extEnb1,ExternalEUtranCellFDD=extCell1</v>
+      </attr>
+      <attr name="loadBalancing">
+        <v>NOT_ALLOWED</v>
+      </attr>
+      <attr name="sCellCandidate">
+        <v>AUTO</v>
+      </attr>
+      <attr name="sCellPriority">
+        <v>7</v>
+      </attr>
+      <attr name="cellIndividualOffsetEUtran">
+        <v>0</v>
+      </attr>
+      <attr name="qOffsetCellEUtran">
+        <v>0</v>
+      </attr>
+    </objectCreated>
+  </events>
+</notification>

@@ -1,0 +1,20 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="0">
+  <edit-config>
+    <target>
+      <running />
+    </target>
+    <config>
+      <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+        <eutran-cell-fdd operation="merge">
+          <id>LTE01dg2ERBS00001-4</id>
+          <dl-channel-bandwidth>15000</dl-channel-bandwidth>
+          <ul-channel-bandwidth>15000</ul-channel-bandwidth>
+          <physical-layer-cell-id-group>80</physical-layer-cell-id-group>
+          <physical-layer-sub-cell-id>1</physical-layer-sub-cell-id>
+          <cell-id>5</cell-id>
+          <tac>2</tac>
+        </eutran-cell-fdd>
+      </enodeb-function>
+    </config>
+  </edit-config>
+</rpc>

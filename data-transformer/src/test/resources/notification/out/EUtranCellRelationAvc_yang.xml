@@ -1,0 +1,37 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <netconf-config-change xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-notifications">
+    <changed-by>
+      <server/>
+    </changed-by>
+    <datastore>running</datastore>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:eutran-freq-relation[lrtadpt:id='myFreqRelation1']/lrtadpt:eutran-cell-relation[lrtadpt:id='myCellRelation1-1']/lrtadpt:coverage-indicator</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:eutran-freq-relation[lrtadpt:id='myFreqRelation1']/lrtadpt:eutran-cell-relation[lrtadpt:id='myCellRelation1-1']/lrtadpt:neighbor-cell-ref</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:eutran-freq-relation[lrtadpt:id='myFreqRelation1']/lrtadpt:eutran-cell-relation[lrtadpt:id='myCellRelation1-1']/lrtadpt:load-balancing</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:eutran-freq-relation[lrtadpt:id='myFreqRelation1']/lrtadpt:eutran-cell-relation[lrtadpt:id='myCellRelation1-1']/lrtadpt:s-cell-candidate</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:eutran-freq-relation[lrtadpt:id='myFreqRelation1']/lrtadpt:eutran-cell-relation[lrtadpt:id='myCellRelation1-1']/lrtadpt:s-cell-priority</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:eutran-freq-relation[lrtadpt:id='myFreqRelation1']/lrtadpt:eutran-cell-relation[lrtadpt:id='myCellRelation1-1']/lrtadpt:cell-individual-offset-eutran</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:eutran-freq-relation[lrtadpt:id='myFreqRelation1']/lrtadpt:eutran-cell-relation[lrtadpt:id='myCellRelation1-1']/lrtadpt:q-offset-cell-eutran</target>
+      <operation>merge</operation>
+    </edit>
+  </netconf-config-change>
+</notification>

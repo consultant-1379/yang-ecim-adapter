@@ -1,0 +1,7 @@
+<enodeb-function>
+  <eutran-cell-fdd>
+    <id>myCell1</id>
+    <eutran-freq-relation>
+    </eutran-freq-relation>
+  </eutran-cell-fdd>
+</enodeb-function>

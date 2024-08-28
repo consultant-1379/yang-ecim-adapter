@@ -1,0 +1,17 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>LTE01dg2ERBS00001</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <eNBId>1</eNBId>
+        <LoadBalancingFunction unexpectedAttr="value1">
+            <loadBalancingFunctionId>1</loadBalancingFunctionId>
+            <lbThreshold>30</lbThreshold>
+            <lbCeiling>200</lbCeiling>
+            <lbRateOffsetCoefficient>320</lbRateOffsetCoefficient>
+            <lbRateOffsetLoadThreshold>500</lbRateOffsetLoadThreshold>
+            <lbCaThreshold>800</lbCaThreshold>
+            <lbDiffCaOffset>100</lbDiffCaOffset>
+            <lbCaCapHysteresis>20</lbCaCapHysteresis>
+        </LoadBalancingFunction>
+    </ENodeBFunction>
+</ManagedElement>

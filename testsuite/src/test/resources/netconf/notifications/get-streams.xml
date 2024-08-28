@@ -1,0 +1,9 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="%s">
+    <get>
+        <filter type="subtree">
+            <netconf xmlns="urn:ietf:params:xml:ns:netmod:notification">
+                <streams/>
+            </netconf>
+        </filter>
+    </get>
+</rpc>

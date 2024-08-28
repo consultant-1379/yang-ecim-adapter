@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="%s">
+  <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+        <managedElementId>1</managedElementId>
+        <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+          <eNodeBFunctionId>1</eNodeBFunctionId>
+          <LoadBalancingFunction operation="merge">
+            <loadBalancingFunctionId>1</loadBalancingFunctionId>
+            <lbCeiling>%s</lbCeiling>
+          </LoadBalancingFunction>
+        </ENodeBFunction>
+      </ManagedElement>
+    </config>
+  </edit-config>
+</rpc>

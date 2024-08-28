@@ -1,0 +1,32 @@
+<equipment xmlns="urn:rdns:com:ericsson:oammodel:ericsson-req-equip-enb-adapter">
+    <antenna-unit-group xmlns="urn:rdns:com:ericsson:oammodel:ericsson-req-antenna-enb-adapter">
+        <id>1</id>
+        <position-information>POSITION_INFO 114</position-information>
+        <position-information/>
+        <antenna-near-unit>
+            <id>3</id>
+            <hardware-version>ABC 1.2.1 XYZ</hardware-version>
+            <iuant-device-type>1</iuant-device-type>
+            <on-unit-unique-id>uniqueId</on-unit-unique-id>
+            <operational-state>disabled</operational-state>
+            <product-number>PDN 123</product-number>
+            <self-test-status>unknown</self-test-status>
+            <serial-number>SN 1234554321</serial-number>
+            <software-version>SWV 2.4.1</software-version>
+            <unique-id>helloWorld</unique-id>
+            <administrative-state>unlocked</administrative-state>
+            <availability-status>off-line</availability-status>
+            <availability-status>power-off</availability-status>
+        </antenna-near-unit>
+        <antenna-near-unit>
+            <iuant-device-type/>
+            <hardware-version/>
+            <on-unit-unique-id/>
+            <product-number/>
+            <self-test-status/>
+            <serial-number/>
+            <software-version/>
+            <unique-id/>
+        </antenna-near-unit>
+    </antenna-unit-group>
+</equipment>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:36+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <AVC dn="ManagedElement=1,ENodeBFunction=1,SectorCarrier=34">
+      <attr name="availabilityStatus">
+        <v>NOT_INSTALLED</v>
+      </attr>
+      <attr name="configuredMaxTxPower">
+        <v>7800000</v>
+      </attr>
+      <attr name="maximumTransmissionPower">
+        <v>980</v>
+      </attr>
+      <attr name="noOfRxAntennas">
+        <v>4</v>
+      </attr>
+      <attr name="noOfTxAntennas">
+        <v>4</v>
+      </attr>
+      <attr name="operationalState">
+        <v>ENABLED</v>
+      </attr>
+      <attr name="prsEnabled">
+        <v>true</v>
+      </attr>
+      <attr name="radioTransmitPerformanceMode">
+        <v>QAM_64_BOOST</v>
+      </attr>
+      <attr name="sectorFunctionRef">
+        <v>ManagedElement=1,NodeSupport=1,SectorEquipmentFunction=19</v>
+      </attr>
+      <attr name="txPowerPersistentLock">
+        <v>true</v>
+      </attr>
+      <attr name="ulForcedTimingAdvanceCommand">
+        <v>7</v>
+      </attr>
+    </AVC>
+  </events>
+</notification>

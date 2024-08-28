@@ -1,0 +1,28 @@
+<enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+    <eutran-cell-fdd>
+        <id>myCell1</id>
+        <eutran-freq-relation>
+            <id>myFreqRelation1</id>
+            <eutran-cell-relation>
+                <id>myCellRelation1-1</id>
+                <coverage-indicator>overlap</coverage-indicator>
+                <neighbor-cell-ref xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutra-network/lrtadpt:external-enodeb-function[lrtadpt:id='extEnb1']/lrtadpt:external-eutran-cell-fdd[lrtadpt:id='extCell1']</neighbor-cell-ref>
+                <load-balancing>not-allowed</load-balancing>
+                <s-cell-candidate>auto</s-cell-candidate>
+                <s-cell-priority>7</s-cell-priority>
+                <cell-individual-offset-eutran>0</cell-individual-offset-eutran>
+                <q-offset-cell-eutran>0</q-offset-cell-eutran>
+            </eutran-cell-relation>
+            <eutran-cell-relation>
+                <id>myCellRelation1-2</id>
+                <coverage-indicator>none</coverage-indicator>
+                <neighbor-cell-ref xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='eutranCell1']</neighbor-cell-ref>
+                <load-balancing>allowed</load-balancing>
+                <s-cell-candidate>auto</s-cell-candidate>
+                <s-cell-priority>8</s-cell-priority>
+                <cell-individual-offset-eutran>-24</cell-individual-offset-eutran>
+                <q-offset-cell-eutran>10</q-offset-cell-eutran>
+            </eutran-cell-relation>
+        </eutran-freq-relation>
+    </eutran-cell-fdd>
+</enodeb-function>

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+echo "Grabbing adapter-server jar file"
+
+jar_file=adapter-server-${project.version}.jar
+
+cp ${jar_file} $TMP_MOUNT_PATH/tmp/
+cp image-files/adapter.service $TMP_MOUNT_PATH/tmp/
+cp image-files/init_params $TMP_MOUNT_PATH/tmp/
+cp image-files/logback.xml $TMP_MOUNT_PATH/tmp/
+cp image-files/run.sh $TMP_MOUNT_PATH/tmp/
+cp image-files/metrics.readme $TMP_MOUNT_PATH/tmp/

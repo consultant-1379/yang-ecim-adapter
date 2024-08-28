@@ -1,0 +1,28 @@
+<enodeb-function>
+  <carrier-aggregation-function>
+      <ca-usage-limit>65535</ca-usage-limit>
+      <ca-preemption-threshold>50</ca-preemption-threshold>
+      <s-cell-act-deact-data-thres>100</s-cell-act-deact-data-thres>
+      <s-cell-act-deact-data-thres-hyst>90</s-cell-act-deact-data-thres-hyst>
+      <s-cell-schedule-sinr-thres>0</s-cell-schedule-sinr-thres>
+      <wait-for-ca-opportunity>10000</wait-for-ca-opportunity>
+      <wait-for-better-s-cell-rep>1000</wait-for-better-s-cell-rep>
+      <wait-for-additional-s-cell-opportunity>10000</wait-for-additional-s-cell-opportunity>
+      <ca-rate-adjust-coeff>10</ca-rate-adjust-coeff>
+      <s-cell-act-deact-ul-data-thresh>100</s-cell-act-deact-ul-data-thresh>
+      <s-cell-act-deact-ul-data-thresh-hyst>90</s-cell-act-deact-ul-data-thresh-hyst>
+      <pdcch-enhanced-la-for-volte>false</pdcch-enhanced-la-for-volte>
+      <s-cell-selection-mode>ack-sequential-scell-selection</s-cell-selection-mode>
+      <s-cell-act-prohibit-timer>10</s-cell-act-prohibit-timer>
+      <s-cell-deact-prohibit-timer>200</s-cell-deact-prohibit-timer>
+      <s-cell-deact-out-of-coverage-timer>100</s-cell-deact-out-of-coverage-timer>
+      <s-cell-deact-delay-timer>50</s-cell-deact-delay-timer>
+      <dynamic-s-cell-selection-method>round-robin</dynamic-s-cell-selection-method>
+      <ca-preference>none</ca-preference>
+      <enhanced-selection-of-mimo-and-ca>false</enhanced-selection-of-mimo-and-ca>
+      <four-layer-mimo-preferred>false</four-layer-mimo-preferred>
+  </carrier-aggregation-function>
+  <carrier-aggregation-function operation="merge">
+      <ca-preemption-threshold>60</ca-preemption-threshold>
+  </carrier-aggregation-function>
+</enodeb-function>

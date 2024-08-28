@@ -1,0 +1,15 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>LTE01dg2ERBS00001</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <QciTable>
+            <qciTableId>default</qciTableId>
+            <LogicalChannelGroup>
+                <logicalChannelGroupId>0</logicalChannelGroupId>
+            </LogicalChannelGroup>
+            <LogicalChannelGroup unexpectedAttr="value">
+                <logicalChannelGroupId>1</logicalChannelGroupId>
+            </LogicalChannelGroup>
+        </QciTable>
+    </ENodeBFunction>
+</ManagedElement>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-07-19T17:10:59+00:00</eventTime>
+  <events dnPrefix="" xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <AVC dn="ManagedElement=1,NodeSupport=1,SectorEquipmentFunction=38">
+      <attr name="administrative-state">
+        <v>UNLOCKED</v>
+      </attr>
+      <attr name="availability-status">
+        <v>IN_TEST</v>
+      </attr>
+      <attr name="eutran-fq-bands">
+        <v>Band12: partial on all</v>
+        <v>Band17: full on all</v>
+        <v>Band23: partial on all</v>
+      </attr>
+      <attr name="mixedModeRadio">
+        <v>false</v>
+      </attr>
+      <attr name="operational-state">
+        <v>ENABLED</v>
+      </attr>
+      <attr name="utran-fdd-fq-bands">
+        <v>Band II: partial on all</v>
+        <v>Band III: partial on all</v>
+        <v>Band XII: full on all</v>
+      </attr>
+    </AVC>
+  </events>
+</notification>

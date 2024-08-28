@@ -1,0 +1,33 @@
+Each record contains a comma separated list of values.
+The following records are logged by the adapter
+
+- EXTENDED_RPC_MESSAGE
+An entry is created in the metrics log for each state of operation processed by the adapter and is only available at debug level.
+The record has the following comma separated values in the following order
+    - datetimeOfLogEntry
+    - threadName
+    - logLevel
+    - recordName
+    - sessionId
+    - southboundSessionId (sessionIdUsedToConnectToNode)
+    - messageId
+    - rpcOperation
+    - amountTimeSpentProcessingRequestInAdapter (ms)
+    - amountTimeSpentProcessingResponseInAdapter (ms)
+    - amountTimeSpentProcessingYangToEcimTransformation (ms)
+    - amountTimeSpentProcessingFilterTransformation (ms)
+    - amountTimeSpentHandlingResponsePostProcess (ms)
+    - amountTimeSpentHandlingError (ms)
+    - amountTimeSpentHandlingException (ms)
+
+- EXTENDED_NOTIFICATION_INFO
+An entry is created in the metrics log for each notification processed by the adapter and is only available at debug level.
+The record has the following comma separated values in the following order
+    - datetimeOfLogEntry
+    - threadName
+    - logLevel
+    - recordName
+    - sessionId
+    - southboundSessionId (sessionIdUsedToConnectToNode)
+    - amountTimeSpentProcessingNotificationInAdapter (ms)
+    - amountTimeSpentTranslatingNotificationReceviedFromNode (ms)

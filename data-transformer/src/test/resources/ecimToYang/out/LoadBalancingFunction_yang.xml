@@ -1,0 +1,12 @@
+<enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+  <enb-id>1</enb-id>
+  <load-balancing-function>
+      <lb-threshold>30</lb-threshold>
+      <lb-ceiling>200</lb-ceiling>
+      <lb-rate-offset-coefficient>320</lb-rate-offset-coefficient>
+      <lb-rate-offset-load-threshold>500</lb-rate-offset-load-threshold>
+      <lb-ca-threshold>800</lb-ca-threshold>
+      <lb-diff-ca-offset>100</lb-diff-ca-offset>
+      <lb-ca-cap-hysteresis>20</lb-ca-cap-hysteresis>
+  </load-balancing-function>
+</enodeb-function>

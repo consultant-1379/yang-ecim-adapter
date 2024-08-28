@@ -1,0 +1,8 @@
+<enodeb-function operation="merge">
+  <enb-id>1</enb-id>
+  <enodeb-plmn-id>
+    <mcc>111</mcc>
+    <mnc>02</mnc>
+    <mnc-length>2</mnc-length>
+  </enodeb-plmn-id>
+</enodeb-function>

@@ -1,0 +1,32 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>LTE01dg2ERBS00001</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell1</eUtranCellFDDId>
+            <EUtranFreqRelation>
+                <caFreqPriority>4</caFreqPriority>
+                <eUtranFreqRelationId>myFreqRelation1</eUtranFreqRelationId>
+                <caFreqProportion>100</caFreqProportion>
+                <caTriggeredRedirectionActive>true</caTriggeredRedirectionActive>
+                <lbA5Thr1RsrpFreqOffset>0</lbA5Thr1RsrpFreqOffset>
+                <lbActivationThreshold>0</lbActivationThreshold>
+                <qOffsetFreq>0</qOffsetFreq>
+                <eutranFreqToQciProfileRelation struct="EUtranFreqToQciProfileRelation">
+                    <qciProfileRef>ManagedElement=SRN1EENB105,ENodeBFunction=1,QciTable=default,QciProfilePredefined=qci9</qciProfileRef>
+                    <lbQciProfileHandling>ALLOWED</lbQciProfileHandling>
+                </eutranFreqToQciProfileRelation>
+            </EUtranFreqRelation>
+            <EUtranFreqRelation>
+                <eutranFreqToQciProfileRelation struct="EUtranFreqToQciProfileRelation" unexpectedAttr="value1">
+                    <qciProfileRef>ManagedElement=SRN1EENB105,ENodeBFunction=1,QciTable=default,QciProfileOperatorDefined=qci9</qciProfileRef>
+                    <lbQciProfileHandling>ALLOWED</lbQciProfileHandling>
+                </eutranFreqToQciProfileRelation>
+                <eUtranFreqRelationId>myFreqRelation2</eUtranFreqRelationId>
+            </EUtranFreqRelation>
+            <EUtranFreqRelation unexpectedAttr="value1">
+                <eUtranFreqRelationId>myFreqRelation3</eUtranFreqRelationId>
+            </EUtranFreqRelation>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

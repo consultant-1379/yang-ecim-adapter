@@ -1,0 +1,27 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="0">
+  <edit-config>
+    <target>
+      <running />
+    </target>
+    <config>
+      <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+        <eutran-cell-fdd operation="merge">
+          <id>13</id>
+          <tac>%s</tac>
+        </eutran-cell-fdd>
+        <load-balancing-function operation="merge">
+          <lb-threshold>%s</lb-threshold>
+        </load-balancing-function>
+        <load-balancing-function operation="merge">
+          <lb-ceiling>%s</lb-ceiling>
+        </load-balancing-function>
+        <qci-table>
+          <qci-profile-operator-defined operation="merge">
+            <id>shin1</id>
+            <dl-max-waiting-time>%s</dl-max-waiting-time>
+          </qci-profile-operator-defined>
+        </qci-table>
+      </enodeb-function>
+    </config>
+  </edit-config>
+</rpc>

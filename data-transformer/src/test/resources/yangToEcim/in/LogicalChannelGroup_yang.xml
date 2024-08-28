@@ -1,0 +1,10 @@
+<enodeb-function>
+  <qci-table>
+    <logical-channel-group>
+      <id>0</id>
+    </logical-channel-group>
+    <logical-channel-group operation="merge">
+      <id>1</id>
+    </logical-channel-group>
+  </qci-table>
+</enodeb-function>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="%s">
+  <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+        <managedElementId>1</managedElementId>
+        <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+          <eNodeBFunctionId>1</eNodeBFunctionId>
+          <SectorCarrier operation="merge">
+            <sectorCarrierId>2</sectorCarrierId>
+            <configuredMaxTxPower>%s</configuredMaxTxPower>
+          </SectorCarrier>
+        </ENodeBFunction>
+        <NodeSupport xmlns="urn:com:ericsson:ecim:RmeSupport">
+          <nodeSupportId>1</nodeSupportId>
+          <SectorEquipmentFunction xmlns="urn:com:ericsson:ecim:RmeSectorEquipmentFunction" operation="merge">
+            <sectorEquipmentFunctionId>1</sectorEquipmentFunctionId>
+            <mixedModeRadio>%s</mixedModeRadio>
+          </SectorEquipmentFunction>
+        </NodeSupport>
+      </ManagedElement>
+    </config>
+  </edit-config>
+</rpc>

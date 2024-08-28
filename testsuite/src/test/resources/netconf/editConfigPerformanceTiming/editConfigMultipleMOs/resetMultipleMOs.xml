@@ -1,0 +1,85 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="0">
+  <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+        <carrier-aggregation-function operation="merge">
+          <pdcch-enhanced-la-for-volte>false</pdcch-enhanced-la-for-volte>
+          <enhanced-selection-of-mimo-and-ca>false</enhanced-selection-of-mimo-and-ca>
+        </carrier-aggregation-function>
+        <eutra-network>
+          <external-enodeb-function operation="merge">
+            <enodeb-plmn-id>
+              <mcc>353</mcc>
+              <mnc>57</mnc>
+              <mnc-length>2</mnc-length>
+            </enodeb-plmn-id>
+            <id>LTE00pERBS00005</id>
+            <enb-id>-35</enb-id>
+            <es-cell-capacity-scaling>100</es-cell-capacity-scaling>
+            <external-eutran-cell-fdd>
+              <id>LTE00pERBS00005-1</id>
+              <local-cell-id>1</local-cell-id>
+            </external-eutran-cell-fdd>
+          </external-enodeb-function>
+        </eutra-network>
+        <eutran-cell-fdd operation="merge">
+          <id>LTE01dg2ERBS00001-1</id>
+          <earfcnul>18001</earfcnul>
+          <ul-channel-bandwidth>10000</ul-channel-bandwidth>
+          <eutran-freq-relation operation="merge">
+            <id>2</id>
+            <ca-freq-priority>7</ca-freq-priority>
+            <eutran-cell-relation operation="merge">
+              <id>88</id>
+              <coverage-indicator>overlap</coverage-indicator>
+              <load-balancing>not-allowed</load-balancing>
+              <s-cell-candidate>auto</s-cell-candidate>
+              <s-cell-priority>7</s-cell-priority>
+            </eutran-cell-relation>
+          </eutran-freq-relation>
+          <ue-meas-control>
+            <s-measure>0</s-measure>
+            <report-config-eutra-interfreq-lb>
+              <a5-threshold2-rsrp>-44</a5-threshold2-rsrp>
+            </report-config-eutra-interfreq-lb>
+          </ue-meas-control>
+        </eutran-cell-fdd>
+        <load-balancing-function operation="merge">
+          <lb-threshold>30</lb-threshold>
+          <lb-ceiling>200</lb-ceiling>
+          <lb-rate-offset-coefficient>320</lb-rate-offset-coefficient>
+        </load-balancing-function>
+        <qci-table>
+          <qci-profile-predefined operation="merge">
+            <id>1</id>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>1</qci-subscription-quanta>
+          </qci-profile-predefined>
+          <qci-profile-predefined operation="merge">
+            <id>2</id>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>1</qci-subscription-quanta>
+          </qci-profile-predefined>
+          <qci-profile-predefined operation="merge">
+            <id>3</id>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>1</qci-subscription-quanta>
+          </qci-profile-predefined>
+          <qci-profile-predefined operation="merge">
+            <id>4</id>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>1</qci-subscription-quanta>
+          </qci-profile-predefined>
+          <qci-profile-predefined operation="merge">
+            <id>5</id>
+            <resource-type>non-gbr</resource-type>
+            <qci-subscription-quanta>1</qci-subscription-quanta>
+          </qci-profile-predefined>
+        </qci-table>
+      </enodeb-function>
+    </config>
+  </edit-config>
+</rpc>

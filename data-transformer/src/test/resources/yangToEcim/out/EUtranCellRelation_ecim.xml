@@ -1,0 +1,35 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtranCellFDD>
+            <eUtranCellFDDId>myCell1</eUtranCellFDDId>
+            <EUtranFreqRelation>
+                <eUtranFreqRelationId>myFreqRelation1</eUtranFreqRelationId>
+                <EUtranCellRelation>
+                    <eUtranCellRelationId>myCellRelation1-1</eUtranCellRelationId>
+                    <coverageIndicator>OVERLAP</coverageIndicator>
+                    <neighborCellRef operation="replace">ManagedElement=1,ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=extEnb1,ExternalEUtranCellFDD=extCell1</neighborCellRef>
+                    <loadBalancing>NOT_ALLOWED</loadBalancing>
+                    <sCellCandidate>AUTO</sCellCandidate>
+                    <sCellPriority>7</sCellPriority>
+                    <cellIndividualOffsetEUtran>0</cellIndividualOffsetEUtran>
+                    <qOffsetCellEUtran>0</qOffsetCellEUtran>
+                </EUtranCellRelation>
+                <EUtranCellRelation>
+                    <eUtranCellRelationId>myCellRelation1-2</eUtranCellRelationId>
+                    <coverageIndicator>NONE</coverageIndicator>
+                    <neighborCellRef>ManagedElement=1,ENodeBFunction=1,EUtranCellFDD=eutranCell1</neighborCellRef>
+                    <loadBalancing>ALLOWED</loadBalancing>
+                    <sCellCandidate>AUTO</sCellCandidate>
+                    <sCellPriority>8</sCellPriority>
+                    <cellIndividualOffsetEUtran>-24</cellIndividualOffsetEUtran>
+                    <qOffsetCellEUtran>10</qOffsetCellEUtran>
+                </EUtranCellRelation>
+                <EUtranCellRelation operation="delete">
+                    <eUtranCellRelationId>myCellRelation1-2</eUtranCellRelationId>
+                </EUtranCellRelation>
+            </EUtranFreqRelation>
+        </EUtranCellFDD>
+    </ENodeBFunction>
+</ManagedElement>

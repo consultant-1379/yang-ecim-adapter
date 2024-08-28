@@ -1,0 +1,10 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <NodeSupport xmlns="urn:com:ericsson:ecim:RmeSupport">
+        <SectorEquipmentFunction xmlns="urn:com:ericsson:ecim:RmeSectorEquipmentFunction">
+            <administrativeState/>
+            <mixedModeRadio/>
+            <rfBranchRef/>
+        </SectorEquipmentFunction>
+    </NodeSupport>
+</ManagedElement>

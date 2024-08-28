@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <AVC dn="ManagedElement=1,ENodeBFunction=1,CarrierAggregationFunction=1">
+      <attr name="caUsageLimit">
+        <v>65535</v>
+      </attr>
+      <attr name="caPreemptionThreshold">
+        <v>50</v>
+      </attr>
+      <attr name="sCellActDeactDataThres">
+        <v>100</v>
+      </attr>
+      <attr name="sCellActDeactDataThresHyst">
+        <v>90</v>
+      </attr>
+      <attr name="sCellScheduleSinrThres">
+        <v>0</v>
+      </attr>
+      <attr name="waitForCaOpportunity">
+        <v>10000</v>
+      </attr>
+      <attr name="waitForBetterSCellRep">
+        <v>1000</v>
+      </attr>
+      <attr name="waitForAdditionalSCellOpportunity">
+        <v>10000</v>
+      </attr>
+      <attr name="caRateAdjustCoeff">
+        <v>10</v>
+      </attr>
+      <attr name="sCellActDeactUlDataThresh">
+        <v>100</v>
+      </attr>
+      <attr name="sCellActDeactUlDataThreshHyst">
+        <v>90</v>
+      </attr>
+      <attr name="pdcchEnhancedLaForVolte">
+        <v>false</v>
+      </attr>
+      <attr name="sCellSelectionMode">
+        <v>ACK_SEQUENTIAL_SCELL_SELECTION</v>
+      </attr>
+      <attr name="sCellActProhibitTimer">
+        <v>10</v>
+      </attr>
+      <attr name="sCellDeactProhibitTimer">
+        <v>200</v>
+      </attr>
+      <attr name="sCellDeactOutOfCoverageTimer">
+        <v>100</v>
+      </attr>
+      <attr name="sCellDeactDelayTimer">
+        <v>50</v>
+      </attr>
+      <attr name="dynamicSCellSelectionMethod">
+        <v>ROUND_ROBIN</v>
+      </attr>
+      <attr name="caPreference">
+        <v>NONE</v>
+      </attr>
+      <attr name="enhancedSelectionOfMimoAndCa">
+        <v>false</v>
+      </attr>
+      <attr name="fourLayerMimoPreferred">
+        <v>false</v>
+      </attr>
+    </AVC>
+  </events>
+</notification>

@@ -1,0 +1,18 @@
+<get>
+  <filter type="subtree">
+    <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+      <enb-id/>
+      <qci-table>
+        <qci-profile-predefined>
+          <id>%s</id>
+          <qci/>
+          <qci-subscription-quanta/>
+          <dscp/>
+          <logical-channel-group-ref/>
+          <priority/>
+          <resource-type/>
+        </qci-profile-predefined>
+      </qci-table>
+    </enodeb-function>
+  </filter>
+</get>

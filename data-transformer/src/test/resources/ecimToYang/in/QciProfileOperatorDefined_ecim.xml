@@ -1,0 +1,59 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>LTE01dg2ERBS00001</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <QciTable>
+            <qciTableId>default</qciTableId>
+            <QciProfileOperatorDefined>
+                <qci>10</qci>
+                <qciSubscriptionQuanta>110</qciSubscriptionQuanta>
+                <dscp>0</dscp>
+                <qciProfileOperatorDefinedId>myQci10</qciProfileOperatorDefinedId>
+                <logicalChannelGroupRef>ManagedElement=LTE01dg2ERBS00001,ENodeBFunction=1,QciTable=default,LogicalChannelGroup=0</logicalChannelGroupRef>
+                <priority>1</priority>
+                <resourceType>NON_GBR</resourceType>
+                <schedulingAlgorithm>RESOURCE_FAIR</schedulingAlgorithm>
+                <absPrioOverride>NO_OVERRIDE</absPrioOverride>
+                <dlMaxWaitingTime>0</dlMaxWaitingTime>
+                <dlMinBitRate>0</dlMinBitRate>
+                <dlResourceAllocationStrategy>RESOURCE_FAIR</dlResourceAllocationStrategy>
+                <pdb>80</pdb>
+                <relativePriority>1</relativePriority>
+                <resourceAllocationStrategy>RESOURCE_FAIR</resourceAllocationStrategy>
+                <serviceType>UNDEFINED</serviceType>
+                <srsAllocationStrategy>DEACTIVATED</srsAllocationStrategy>
+                <ulMaxWaitingTime>0</ulMaxWaitingTime>
+                <ulMinBitRate>0</ulMinBitRate>
+            </QciProfileOperatorDefined>
+            <QciProfileOperatorDefined unexpectedAttr="value1">
+                <qci>11</qci>
+                <qciSubscriptionQuanta>111</qciSubscriptionQuanta>
+                <qciProfileOperatorDefinedId>myQci11</qciProfileOperatorDefinedId>
+            </QciProfileOperatorDefined>
+            <QciProfileOperatorDefined unexpectedAttr="value2">
+                <qci>12</qci>
+                <qciSubscriptionQuanta>112</qciSubscriptionQuanta>
+                <dscp>2</dscp>
+                <logicalChannelGroupRef>ManagedElement=LTE01dg2ERBS00001,ENodeBFunction=1,QciTable=default,LogicalChannelGroup=2</logicalChannelGroupRef>
+                <priority>2</priority>
+                <resourceType>GBR</resourceType>
+                <schedulingAlgorithm>PROPORTIONAL_FAIR_HIGH</schedulingAlgorithm>
+                <absPrioOverride>HI_PRIO_OVERRIDE</absPrioOverride>
+                <dlMaxWaitingTime>250</dlMaxWaitingTime>
+                <dlMinBitRate>150000</dlMinBitRate>
+                <dlResourceAllocationStrategy>FREQUENCY_SELECTIVE</dlResourceAllocationStrategy>
+                <pdb>500</pdb>
+                <qciProfileOperatorDefinedId>myQci12</qciProfileOperatorDefinedId>
+                <relativePriority>65000</relativePriority>
+                <resourceAllocationStrategy>FREQUENCY_SELECTIVE</resourceAllocationStrategy>
+                <serviceType>IMS_SIGNALING</serviceType>
+                <srsAllocationStrategy>ACTIVATED</srsAllocationStrategy>
+                <ulMaxWaitingTime>500</ulMaxWaitingTime>
+                <ulMinBitRate>75000</ulMinBitRate>
+            </QciProfileOperatorDefined>
+            <QciProfileOperatorDefined unexpectedAttr="value3">
+                <qciProfileOperatorDefinedId>myQci20</qciProfileOperatorDefinedId>
+            </QciProfileOperatorDefined>
+        </QciTable>
+    </ENodeBFunction>
+</ManagedElement>

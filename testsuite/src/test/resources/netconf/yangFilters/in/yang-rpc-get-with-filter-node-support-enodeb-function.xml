@@ -1,0 +1,17 @@
+<get>
+    <filter type="subtree">
+        <enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+            <enb-id/>
+            <enodeb-plmn-id>
+                <mcc/>
+                <mnc/>
+                <mnc-length/>
+            </enodeb-plmn-id>
+        </enodeb-function>
+        <node-support xmlns="urn:rdns:com:ericsson:oammodel:ericsson-rme-sef-enb-adapter">
+            <sector-equipment-function>
+                <id>1</id>
+            </sector-equipment-function>
+        </node-support>
+    </filter>
+</get>

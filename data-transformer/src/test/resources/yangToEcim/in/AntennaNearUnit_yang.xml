@@ -1,0 +1,20 @@
+<equipment>
+    <antenna-unit-group>
+        <id>1</id>
+        <position-information>2</position-information>
+        <antenna-near-unit>
+            <id>3</id>
+            <availability-status>off-line</availability-status>
+            <hardware-version>ABC 1.2.1 XYZ</hardware-version>
+            <iuant-device-type>1</iuant-device-type>
+            <on-unit-unique-id>uniqueId</on-unit-unique-id>
+            <operational-state>disabled</operational-state>
+            <product-number>PDN 123</product-number>
+            <self-test-status>unknown</self-test-status>
+            <serial-number>SN 1234554321</serial-number>
+            <software-version>SWV 2.4.1</software-version>
+            <unique-id>helloWorld</unique-id>
+            <administrative-state>unlocked</administrative-state>
+        </antenna-near-unit>
+    </antenna-unit-group>
+</equipment>

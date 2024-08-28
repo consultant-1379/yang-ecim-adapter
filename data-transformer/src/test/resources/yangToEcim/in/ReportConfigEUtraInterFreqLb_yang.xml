@@ -1,0 +1,24 @@
+<enodeb-function>
+  <eutran-cell-fdd>
+    <id>myCell1</id>
+    <ue-meas-control>
+        <report-config-eutra-interfreq-lb>
+            <a5-threshold1-rsrp>-44</a5-threshold1-rsrp>
+            <a5-threshold2-rsrp>-45</a5-threshold2-rsrp>
+            <a5-threshold2-rsrq>-195</a5-threshold2-rsrq>
+            <hysteresis-a5>10</hysteresis-a5>
+        </report-config-eutra-interfreq-lb>
+    </ue-meas-control>
+  </eutran-cell-fdd>
+  <eutran-cell-fdd>
+    <id>myCell2</id>
+    <ue-meas-control>
+        <report-config-eutra-interfreq-lb operation="merge">
+            <a5-threshold1-rsrp>-44</a5-threshold1-rsrp>
+            <a5-threshold2-rsrp>-45</a5-threshold2-rsrp>
+            <a5-threshold2-rsrq>-195</a5-threshold2-rsrq>
+            <hysteresis-a5>10</hysteresis-a5>
+        </report-config-eutra-interfreq-lb>
+    </ue-meas-control>
+  </eutran-cell-fdd>
+</enodeb-function>

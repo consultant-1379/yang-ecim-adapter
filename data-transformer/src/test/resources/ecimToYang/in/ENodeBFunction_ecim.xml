@@ -1,0 +1,12 @@
+<top:ManagedElement xmlns:top="urn:com:ericsson:ecim:ComTop">
+    <top:managedElementId>LTE01dg2ERBS00001</top:managedElementId>
+    <lart:ENodeBFunction xmlns:lart="urn:com:ericsson:ecim:Lrat" unexpectedAttr="value1">
+        <lart:eNodeBFunctionId>1</lart:eNodeBFunctionId>
+        <lart:eNBId>1</lart:eNBId>
+        <lart:eNodeBPlmnId struct="PlmnIdentity">
+            <lart:mcc>111</lart:mcc>
+            <lart:mnc>02</lart:mnc>
+            <lart:mncLength>2</lart:mncLength>
+        </lart:eNodeBPlmnId>
+    </lart:ENodeBFunction>
+</top:ManagedElement>

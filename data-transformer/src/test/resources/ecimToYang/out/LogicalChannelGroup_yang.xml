@@ -1,0 +1,10 @@
+<enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+  <qci-table>
+    <logical-channel-group>
+      <id>0</id>
+    </logical-channel-group>
+    <logical-channel-group>
+      <id>1</id>
+    </logical-channel-group>
+  </qci-table>
+</enodeb-function>

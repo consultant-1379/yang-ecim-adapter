@@ -1,0 +1,25 @@
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <netconf-config-change xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-notifications">
+    <changed-by>
+      <server/>
+    </changed-by>
+    <datastore>running</datastore>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:ue-meas-control/lrtadpt:report-config-eutra-interfreq-lb/lrtadpt:a5-threshold1-rsrp</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:ue-meas-control/lrtadpt:report-config-eutra-interfreq-lb/lrtadpt:a5-threshold2-rsrp</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:ue-meas-control/lrtadpt:report-config-eutra-interfreq-lb/lrtadpt:a5-threshold2-rsrq</target>
+      <operation>merge</operation>
+    </edit>
+    <edit>
+      <target xmlns:lrtadpt="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">/lrtadpt:enodeb-function/lrtadpt:eutran-cell-fdd[lrtadpt:id='myCell1']/lrtadpt:ue-meas-control/lrtadpt:report-config-eutra-interfreq-lb/lrtadpt:hysteresis-a5</target>
+      <operation>merge</operation>
+    </edit>
+  </netconf-config-change>
+</notification>

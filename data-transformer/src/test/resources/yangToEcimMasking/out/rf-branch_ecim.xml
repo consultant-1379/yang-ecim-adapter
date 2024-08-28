@@ -1,0 +1,13 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <Equipment xmlns="urn:com:ericsson:ecim:ReqEquipment">
+        <AntennaUnitGroup xmlns="urn:com:ericsson:ecim:ReqAntennaSystem">
+            <RfBranch>
+                <dlAttenuation/>
+                <dlTrafficDelay/>
+                <ulAttenuation/>
+                <ulTrafficDelay/>
+            </RfBranch>
+        </AntennaUnitGroup>
+    </Equipment>
+</ManagedElement>

@@ -1,0 +1,22 @@
+<enodeb-function xmlns="urn:rdns:com:ericsson:oammodel:ericsson-lrat-enb-adapter">
+  <eutra-network>
+    <external-enodeb-function>
+      <id>1</id>
+      <external-eutran-cell-fdd>
+        <id>myCell1</id>
+        <local-cell-id>1</local-cell-id>
+      </external-eutran-cell-fdd>
+      <external-eutran-cell-fdd>
+        <id>myCell2</id>
+        <local-cell-id>2</local-cell-id>
+      </external-eutran-cell-fdd>
+      <external-eutran-cell-fdd>
+        <id>myCell3</id>
+        <local-cell-id>3</local-cell-id>
+      </external-eutran-cell-fdd>
+      <external-eutran-cell-fdd>
+        <id>myCell10</id>
+      </external-eutran-cell-fdd>
+    </external-enodeb-function>
+  </eutra-network>
+</enodeb-function>

@@ -1,0 +1,7 @@
+<enodeb-function>
+    <eutran-cell-fdd>
+        <ue-meas-control>
+            <report-config-eutra-interfreq-lb/>
+        </ue-meas-control>
+    </eutran-cell-fdd>
+</enodeb-function>

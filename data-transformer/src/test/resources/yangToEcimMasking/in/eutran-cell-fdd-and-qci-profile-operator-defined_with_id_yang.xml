@@ -1,0 +1,12 @@
+<enodeb-function>
+    <eutran-cell-fdd>
+        <eutran-freq-relation/>
+    </eutran-cell-fdd>
+</enodeb-function>
+<enodeb-function>
+<qci-table>
+    <qci-profile-operator-defined>
+        <id>gb3</id>
+    </qci-profile-operator-defined>
+</qci-table>
+</enodeb-function>

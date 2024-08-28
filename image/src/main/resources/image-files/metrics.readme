@@ -1,0 +1,51 @@
+The adapter logs metrics on the time spent processing the client requests within the adapter.
+These can be used to assist in measuring the performance of the adapter and the latency
+of the client requests.
+  
+Each record contains a comma separated list of values.
+The following records are logged by the adapter
+
+- SESSION_CREATE
+An entry is created in the metrics log for each ssh session creation in the adapter.
+The record has the following comma separated values in the following order
+    - datetimeOfLogEntry
+    - threadName
+    - logLevel
+    - recordName
+    - sessionId
+    - southboundSessionId (sessionIdUsedToConnectToNode)
+    - timeRequestWasReceivedByAdapter (epoch time)
+    - timeSessionWasCreated (epoch time)
+    - amountTimeSpentCreatingSession (ms)
+
+- RPC_MESSAGE
+An entry is created in the metrics log for each Netconf Rpc request processed by the adapter.
+The record has the following comma separated values in the following order
+    - datetimeOfLogEntry
+    - threadName
+    - logLevel
+    - recordName
+    - sessionId
+    - southboundSessionId (sessionIdUsedToConnectToNode)
+    - messageId
+    - rpcOperation
+    - timeRequestWasReceivedByAdapter (epoch time)
+    - timeRequestSentToNode (epoch time)
+    - amountTimeSpentProcessingRequestInAdapter (ms)
+    - amountTimeSpentWaitingForResponseFromNode (ms)
+    - timeResponseWasReceivedByAdapter (epoch time)
+    - timeResponseSentToClient (epoch time)
+    - amountTimeSpentProcessingResponseInAdapter (ms)
+
+- NOTIFICATION
+An entry is created in the metrics log for each notification processed by the adapter.
+The record has the following comma separated values in the following order
+    - datetimeOfLogEntry
+    - threadName
+    - logLevel
+    - recordName
+    - sessionId
+    - southboundSessionId (sessionIdUsedToConnectToNode)
+    - timeNotificationWasReceivedByAdapter (epoch time)
+    - timeNotificationWasSentToClient (epoch time)
+    - amountTimeSpentProcessingNotificationInAdapter (ms)

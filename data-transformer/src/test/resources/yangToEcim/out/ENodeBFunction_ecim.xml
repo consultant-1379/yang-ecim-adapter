@@ -1,0 +1,12 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat" operation="merge">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <eNBId>1</eNBId>
+        <eNodeBPlmnId>
+            <mcc>111</mcc>
+            <mnc>02</mnc>
+            <mncLength>2</mncLength>
+        </eNodeBPlmnId>
+    </ENodeBFunction>
+</ManagedElement>

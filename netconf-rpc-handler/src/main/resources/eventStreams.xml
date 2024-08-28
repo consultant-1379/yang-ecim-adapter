@@ -1,0 +1,9 @@
+<netconf xmlns="urn:ietf:params:xml:ns:netmod:notification">
+    <streams>
+        <stream>
+            <name>NETCONF</name>
+            <description>default NETCONF event stream</description>
+            <replaySupport>false</replaySupport>
+        </stream>
+    </streams>
+</netconf>

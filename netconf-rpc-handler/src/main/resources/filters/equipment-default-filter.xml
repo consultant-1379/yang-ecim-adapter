@@ -1,0 +1,48 @@
+<equipment>
+    <antenna-unit-group>
+        <position-information/>
+    </antenna-unit-group>
+    <antenna-unit-group>
+        <antenna-near-unit>
+            <hardware-version config="false"/>
+            <iuant-device-type/>
+            <on-unit-unique-id config="false"/>
+            <operational-state config="false"/>
+            <product-number config="false"/>
+            <self-test-status config="false"/>
+            <serial-number config="false"/>
+            <software-version config="false"/>
+            <unique-id/>
+            <administrative-state/>
+            <availability-status config="false"/>
+        </antenna-near-unit>
+        <rf-branch>
+            <dl-attenuation/>
+            <dl-traffic-delay/>
+            <ul-attenuation/>
+            <ul-traffic-delay/>
+        </rf-branch>
+    </antenna-unit-group>
+    <antenna-unit-group>
+        <antenna-near-unit>
+            <ret-sub-unit>
+                <calibration-status config="false"/>
+                <electrical-antenna-tilt/>
+                <iuant-antenna-bearing/>
+                <iuant-antenna-model-number/>
+                <iuant-antenna-operating-band/>
+                <iuant-antenna-serial-number/>
+                <iuant-base-station-id/>
+                <iuant-installation-date/>
+                <iuant-installers-id/>
+                <iuant-sector-id/>
+                <max-tilt/>
+                <min-tilt/>
+                <operational-state config="false"/>
+                <subunit-number config="false"/>
+                <iuant-antenna-operating-gain/>
+                <availability-status config="false"/>
+            </ret-sub-unit>
+        </antenna-near-unit>
+    </antenna-unit-group>
+</equipment>

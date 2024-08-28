@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification xmlns="urn:ietf:params:xml:ns:netconf:notification:1.0">
+  <eventTime>2018-01-18T16:59:361234+00:00</eventTime>
+  <events xmlns="urn:ericsson:com:netconf:notification:1.0">
+    <AVC dn="ManagedElement=1,ENodeBFunction=1,LoadBalancingFunction=1">
+      <attr name="lbThreshold">
+        <v>30</v>
+      </attr>
+      <attr name="lbCeiling">
+        <v>200</v>
+      </attr>
+      <attr name="lbRateOffsetCoefficient">
+        <v>320</v>
+      </attr>
+      <attr name="lbRateOffsetLoadThreshold">
+        <v>500</v>
+      </attr>
+      <attr name="lbCaThreshold">
+        <v>800</v>
+      </attr>
+      <attr name="lbDiffCaOffset">
+        <v>100</v>
+      </attr>
+      <attr name="lbCaCapHysteresis">
+        <v>20</v>
+      </attr>
+    </AVC>
+  </events>
+</notification>

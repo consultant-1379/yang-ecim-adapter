@@ -1,0 +1,42 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>1</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <eNodeBFunctionId>1</eNodeBFunctionId>
+        <EUtraNetwork>
+            <eUtraNetworkId>1</eUtraNetworkId>
+            <ExternalENodeBFunction>
+                <externalENodeBFunctionId>1</externalENodeBFunctionId>
+                <eNBId>11</eNBId>
+                <eSCellCapacityScaling>1000</eSCellCapacityScaling>
+                <eNodeBPlmnId>
+                    <mcc>111</mcc>
+                    <mnc>02</mnc>
+                    <mncLength>2</mncLength>
+                </eNodeBPlmnId>
+            </ExternalENodeBFunction>
+            <ExternalENodeBFunction operation="merge">
+                <externalENodeBFunctionId>2</externalENodeBFunctionId>
+                <eNBId>22</eNBId>
+                <eSCellCapacityScaling>2000</eSCellCapacityScaling>
+                <eNodeBPlmnId>
+                    <mcc>222</mcc>
+                    <mnc>02</mnc>
+                    <mncLength>2</mncLength>
+                </eNodeBPlmnId>
+            </ExternalENodeBFunction>
+            <ExternalENodeBFunction operation="create">
+                <externalENodeBFunctionId>3</externalENodeBFunctionId>
+                <eNBId>33</eNBId>
+                <eSCellCapacityScaling>3000</eSCellCapacityScaling>
+                <eNodeBPlmnId>
+                    <mcc>333</mcc>
+                    <mnc>03</mnc>
+                    <mncLength>2</mncLength>
+                </eNodeBPlmnId>
+            </ExternalENodeBFunction>
+            <ExternalENodeBFunction operation="delete">
+                <externalENodeBFunctionId>10</externalENodeBFunctionId>
+            </ExternalENodeBFunction>
+        </EUtraNetwork>
+    </ENodeBFunction>
+</ManagedElement>

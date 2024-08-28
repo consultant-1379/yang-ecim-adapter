@@ -1,0 +1,14 @@
+<ManagedElement xmlns="urn:com:ericsson:ecim:ComTop">
+    <managedElementId>Test</managedElementId>
+    <ENodeBFunction xmlns="urn:com:ericsson:ecim:Lrat">
+        <EUtraNetwork>
+            <ExternalENodeBFunction>
+                <eNBId/>
+                <eSCellCapacityScaling/>
+                <ExternalEUtranCellFDD>
+                    <localCellId/>
+                </ExternalEUtranCellFDD>
+            </ExternalENodeBFunction>
+        </EUtraNetwork>
+    </ENodeBFunction>
+</ManagedElement>
